@@ -102,7 +102,7 @@ public class Pacientes {
 
     @Override
     public String toString() {
-        return "Pacientes{" + "ci=" + ci + ", nombre=" + nombre + ", fecha_inicio=" + fecha_inicio + ", descripcion=" + descripcion + ", celular=" + celular + ", servicio=" + servicio + ", direccion=" + direccion + ", imagen=" + imagen + '}';
+        return "Pacientes{" + "ci=" + ci + ", nombre=" + nombre + ", fecha_inicio=" + fecha_inicio + ", descripcion=" + descripcion + ", celular=" + celular + ", servicio=" + servicio + ", direccion=" + direccion + '}';
     }
     
     

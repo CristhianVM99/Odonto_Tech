@@ -72,8 +72,8 @@
 						<table class="table table-hover text-center">
 							<thead>
 								<tr>
-									<th class="text-center">NOMBRE</th>
 									<th class="text-center">CI</th>
+									<th class="text-center">NOMBRE</th>
 									<th class="text-center">FECHA INICIO</th>
 									<th class="text-center">DESCRIPCION</th>
 									<th class="text-center">CELULAR</th>
@@ -100,25 +100,27 @@
                                                                         <img src="<%=request.getContextPath()%>/Controller_Pacientes?action=mostrarFoto&id=${paciente.ci}" style="width: 100px;"/>
                                                                     </c:if>
                                                                 </td>
-                                                                <td>
+                                                                <td>                                                                    
+                                                                    <form>
                                                                         <a href="Controller_Pacientes?action=edit&id=${paciente.ci}" class="btn btn-success btn-raised btn-xs">
                                                                             <i class="zmdi zmdi-refresh"></i>
                                                                         </a>
-                                                                    </td>
-                                                                    <td>
-                                                                        <form>
-                                                                            <button type="submit" class="btn btn-danger btn-raised btn-xs">
-                                                                                <i class="zmdi zmdi-delete"></i>
-                                                                            </button>
-                                                                        </form>
-                                                                    </td>
-                                                                    <td>
-                                                                        <form>
-                                                                            <button type="submit" class="btn btn-primary btn-raised btn-xs">
-                                                                                <i class="zmdi zmdi-library"></i>
-                                                                            </button>
-                                                                        </form>
-                                                                    </td
+                                                                    </form>
+                                                                </td>
+                                                                <td>
+                                                                    <form>                                                                        
+                                                                        <a href="Controller_Historial?action=view&id=${paciente.ci}" class="btn btn-danger btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-delete"></i>
+                                                                        </a>
+                                                                    </form>
+                                                                </td>
+                                                                <td>
+                                                                    <form>
+                                                                        <button type="submit" class="btn btn-primary btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-library"></i>
+                                                                        </button>
+                                                                    </form>
+                                                                </td
                                                             </tr>
                                                         </c:forEach>
 							</tbody>

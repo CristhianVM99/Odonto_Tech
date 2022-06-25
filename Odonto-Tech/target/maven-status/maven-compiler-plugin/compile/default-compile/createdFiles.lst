@@ -1,14 +1,17 @@
 com\odontotech\model\Doctores.class
 com\odontotech\controller\Controller_Doctores.class
+com\odontotech\model\Historial.class
 com\odontotech\controller\Servlet_prueba.class
 com\odontotech\model\GenericClass.class
 com\odontotech\utiles\Conection.class
 com\odontotech\controller\Controller_login.class
 com\odontotech\controller\Controller_Reserva_De_Citas.class
+com\odontotech\controller\Controller_Historial.class
 com\odontotech\model\Pacientes.class
 com\odontotech\controller\Controller_Pacientes.class
 com\odontotech\dao\genericDAO.class
 com\odontotech\model\Promociones.class
 com\odontotech\model\Reserva_De_Citas.class
+com\odontotech\controller\Controller_Pagina_Web.class
 com\odontotech\dao\genericDAOimplements.class
 com\odontotech\controller\Controller_Principal.class

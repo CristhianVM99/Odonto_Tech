@@ -165,10 +165,10 @@
                                         <div class="col-xs-12">
                                             <div class="form-group label-floating">
                                                 <label>Imagen</label>
-                                                <p>seleccione una Imagen.<br><input type="file" name="imagen"></p>
+                                                <p>seleccione una Imagen.<br><input type="file" name="imagen" value="${paciente.imagen}"></p>
                                                     <c:if test="${paciente.imagen ne null}">
-                                                    <img src="<%=request.getContextPath()%>/Controller_Pacientes?action=mostrarFoto&id=${paciente.ci}" style="width: 100px;"/>
-                                                </c:if>
+                                                        <img src="<%=request.getContextPath()%>/Controller_Pacientes?action=mostrarFoto&id=${paciente.ci}" style="width: 100px;"/>
+                                                    </c:if>
                                             </div>
                                         </div>
                                     </div>

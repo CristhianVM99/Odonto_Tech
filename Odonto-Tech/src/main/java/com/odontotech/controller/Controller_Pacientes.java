@@ -40,11 +40,11 @@ public class Controller_Pacientes extends HttpServlet {
         try {
             String action = (request.getParameter("action") != null) ? request.getParameter("action") : "view";
 
-            String id;
+            //String id;
             genericDAO dao = new genericDAOimplements();
 
             List<GenericClass> lista_pacientes = null; 
-            List<byte[]> lista_imagenes = null;
+            //List<byte[]> lista_imagenes = null;
             byte[] foto = null;
             Pacientes paciente = new Pacientes();
             String valor;
@@ -85,9 +85,9 @@ public class Controller_Pacientes extends HttpServlet {
                     request.getRequestDispatcher("FrmPasciente.jsp").forward(request, response);
                     break;
                 case "delete":
-                    //id = Integer.parseInt(request.getParameter("id"));
-                    //dao.delete(id);
-                    //response.sendRedirect("ParticipanteControlador");
+                    int ci = Integer.parseInt(request.getParameter("id"));
+                    dao.delete("pacientes", ci);
+                    response.sendRedirect("Controller_Pacientes");
                     break;
                 case "view":
                     //obtener la lista de registros de los pascientes.==========
@@ -125,6 +125,10 @@ public class Controller_Pacientes extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Pacientes P = new Pacientes();
+        genericDAO dao = new genericDAOimplements();
+        
+        
         String valor = request.getParameter("valor");
         String nombre = request.getParameter("nombre");
         String ci = request.getParameter("ci");
@@ -137,19 +141,11 @@ public class Controller_Pacientes extends HttpServlet {
         
         //convertir una imagen a byte
         
-        int imgSize = (int)img.getSize(); //si no tiene tamaño, no hay foto
-
-        byte[] imagen = null; //el buffer
-        if (imgSize > 0) {
-            imagen = new byte[imgSize];
-            try ( DataInputStream dis = new DataInputStream(img.getInputStream())) {
-                dis.readFully(imagen);
-            }
-        }
+        byte[] imagen = null;
+        imagen=convierteImagen(img);
         //fin de convercion
         
-        Pacientes P = new Pacientes();
-        genericDAO dao = new genericDAOimplements();
+        
         
         P.setNombre(nombre);
         P.setCi(ci);
@@ -158,9 +154,10 @@ public class Controller_Pacientes extends HttpServlet {
         P.setCelular(celular);
         P.setServicio(servicio);
         P.setDireccion(direccion);
+        System.out.println(P.getFecha_inicio());
 
         //if (imgSize > 0)
-        //    paciente.setImagen(imagen);
+        //    paciente.setImagen(imagen); 
         
         if(valor.equals("nuevo"))
         {
@@ -174,7 +171,11 @@ public class Controller_Pacientes extends HttpServlet {
             }
         }else{
             try {
-                
+                //imagen
+                if(imagen == null)
+                {
+                    imagen=dao.buscarById_image("pacientes", Integer.parseInt(P.getCi()));
+                }
                 //edicion de registro
                 dao.update(P.toString(), imagen);
                 
@@ -200,4 +201,19 @@ public class Controller_Pacientes extends HttpServlet {
         }        
         return fechaBD;
     }
+        
+    public byte[] convierteImagen( Part img) throws IOException
+    {
+        int imgSize = (int)img.getSize(); //si no tiene tamaño, no hay foto
+
+        byte[] imagen = null; //el buffer
+        if (imgSize > 0) {
+            imagen = new byte[imgSize];
+            try ( DataInputStream dis = new DataInputStream(img.getInputStream())) {
+                dis.readFully(imagen);
+            }
+        }
+        return imagen;
+    }        
+        
 }

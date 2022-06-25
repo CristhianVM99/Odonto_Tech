@@ -5,9 +5,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.odontotech.model.GenericClass"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-    List<GenericClass> lista_pacientes = (List<GenericClass>)request.getAttribute("lista_historial");        
-%>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,7 +38,7 @@
                 
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Pacientes <small>Consultorio</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Paciente - Historial <small>Consultorio</small></h1>
 			</div>
                     <p class="lead">En esta ocacion mostraremos lo que son los registros de los pascientes que hay en la clinica. <br>A continuacion tenemos los siguientes Registros.</p>
 		</div>
@@ -48,13 +46,13 @@
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
-			  		<a href="Controller_Pacientes" class="btn btn-info">
-			  			<i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE PACIENTES
+			  		<a href="Controller_Historial" class="btn btn-info">
+			  			<i class="zmdi zmdi-plus"></i> &nbsp; HISTORIAL
 			  		</a>
 			  	</li>
 			  	<li>
-			  		<a href="FrmPasciente.jsp" class="btn btn-success">
-			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVO PACIENTE
+			  		<a href="Controller_Historial?action=add" class="btn btn-success">
+			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVO REGISTRO
 			  		</a>
 			  	</li>
 			</ul>
@@ -64,61 +62,44 @@
 		<div class="container-fluid">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE PASCIENTES</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE HISTORIAL</h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-hover text-center">
 							<thead>
 								<tr>
-									<th class="text-center">NOMBRE</th>
-									<th class="text-center">CI</th>
-									<th class="text-center">FECHA INICIO</th>
+									<th class="text-center">ID</th>
+									<th class="text-center">PACIENTE</th>
+									<th class="text-center">FECHA</th>
 									<th class="text-center">DESCRIPCION</th>
-									<th class="text-center">CELULAR</th>
-									<th class="text-center">SERVICIO</th>
-                                                                        <th class="text-center">DIRECCION</th>
-                                                                        <th class="text-center">IMAGEN</th>
                                                                         <th class="text-center">EDITAR</th>
                                                                         <th class="text-center">ELIMINAR</th>
-                                                                        <th class="text-center">HISTORIAL</th>
 								</tr>
 							</thead>
 							<tbody>
+                                                        <c:forEach var="registro" items="${lista_historial}">
                                                             <tr>
-                                                                <%
-                                                                    
-                                                                    for (GenericClass cl : lista_pacientes) {
-                                                                            String[] val = cl.getToString();
-                                                                            for (int i = 2; i < val.length; i=i+2) 
-                                                                            {
-                                                                %> 
-                                                                <td><%= val[i]%></td>
-                                                                <%  
-                                                                            }          
-                                                                    }
-                                                                %>  
-                                                                <td>img</td>
-                                                                <td>
-                                                                    <a href="#!" class="btn btn-success btn-raised btn-xs">
-                                                                        <i class="zmdi zmdi-refresh"></i>
-                                                                    </a>
-                                                                </td>
-                                                                <td>
+                                                                <td>${registro.id}</td>
+                                                                <td>${registro.ci_paciente}</td>
+                                                                <td>${registro.fecha}</td>
+                                                                <td>${paciente.descripcion}</td>
+                                                                <td>                                                                    
                                                                     <form>
-                                                                        <button type="submit" class="btn btn-danger btn-raised btn-xs">
-                                                                            <i class="zmdi zmdi-delete"></i>
-                                                                        </button>
+                                                                        <a href="Controller_Historial?action=edit&id=${registro.id}" class="btn btn-success btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-refresh"></i>
+                                                                        </a>
                                                                     </form>
                                                                 </td>
                                                                 <td>
-                                                                    <form>
-                                                                        <button type="submit" class="btn btn-primary btn-raised btn-xs">
-                                                                            <i class="zmdi zmdi-library"></i>
-                                                                        </button>
+                                                                    <form>                                                                        
+                                                                        <a href="Controller_Historial?action=delete&id=${registro.id}" class="btn btn-danger btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-delete"></i>
+                                                                        </a>
                                                                     </form>
                                                                 </td>
                                                             </tr>
+                                                        </c:forEach>
 							</tbody>
 						</table>
 					</div>

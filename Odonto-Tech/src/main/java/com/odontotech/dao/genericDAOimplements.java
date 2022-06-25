@@ -39,9 +39,16 @@ public class genericDAOimplements extends Conection implements genericDAO {
     @Override
     public void delete(String table, int id) throws Exception {
         this.conectar();
-        String sql = "DELETE FROM " + table + " WHERE id=" + id;
-        PreparedStatement ps = this.conn.prepareStatement(sql);
-        ps.executeUpdate();
+        if(table.equals("pacientes"))
+        {
+            String sql = "DELETE FROM " + table + " WHERE ci='" + id+ "'";
+            PreparedStatement ps = this.conn.prepareStatement(sql);
+            ps.executeUpdate();
+        }else{
+            String sql = "DELETE FROM " + table + " WHERE id=" + id;
+            PreparedStatement ps = this.conn.prepareStatement(sql);
+            ps.executeUpdate();
+        }
         this.desconn();
     }
 
