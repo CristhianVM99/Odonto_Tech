@@ -84,7 +84,7 @@ body, html{
 /*============ LogIn*/
 .login-container{
 	height: 100%;
-	background-image: url(../assets/img/sideBar.png);
+	background-image: url(../assets/img/fondo-login.jpg);
 }
 .logInForm{
 	position: absolute;
@@ -118,9 +118,10 @@ body, html{
 .dashboard-sideBar{
 	left: 0;
 	z-index: 2;
-	background-image: url('../assets/img/sideBar.png');
+	background-image: url('../assets/img/fondo-login.jpg');
 	border-right: 1px solid rgba(255, 255, 255, .7);
 	overflow: hidden;
+        background-size: cover;
 }
 .dashboard-sideBar-ct{
 	position: relative;
