@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Odonto tech | Higiene Dental</title>
+        <title>Odonto tech | Brakets</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Course Project">
@@ -23,11 +23,11 @@
                 <div class="home_background prlx" style="background-image:url(images/fondo-pagina3.jpg)"></div>
             </div>
             <div class="home_content">
-                <h1>Dentista De Niños</h1>
+                <h1>Brakets</h1>
             </div>
         </div>
         
-        <!-- Dentista De Niños -->
+        <!-- Brakets -->
 	<div class="news">
 		<div class="container">
 			<div class="row">

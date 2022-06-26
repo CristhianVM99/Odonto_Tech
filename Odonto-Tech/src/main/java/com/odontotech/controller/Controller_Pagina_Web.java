@@ -29,7 +29,7 @@ public class Controller_Pagina_Web extends HttpServlet {
                     request.getRequestDispatcher("View_EmpastesDentales.jsp").forward(request, response);
                     break;
                 case "Puentes_Dentales":
-                    request.getRequestDispatcher("View_Puentes_Dentales.jsp").forward(request, response);
+                    request.getRequestDispatcher("View_PuentesDentales.jsp").forward(request, response);
                     break;
                 case "Coronas_Dentales":
                     request.getRequestDispatcher("View_CoronasDentales.jsp").forward(request, response);

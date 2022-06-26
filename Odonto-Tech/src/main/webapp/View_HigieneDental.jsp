@@ -23,11 +23,11 @@
                 <div class="home_background prlx" style="background-image:url(images/fondo-pagina3.jpg)"></div>
             </div>
             <div class="home_content">
-                <h1>Dentista De Niños</h1>
+                <h1>Higiene Dental</h1>
             </div>
         </div>
         
-        <!-- Dentista De Niños -->
+        <!-- Higiene Dental Home -->
 	<div class="news">
 		<div class="container">
 			<div class="row">
