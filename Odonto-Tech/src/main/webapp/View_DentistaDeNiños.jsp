@@ -78,7 +78,7 @@
 						<!-- News Post -->
 						<div class="news_post">
 							<div class="news_post_image">
-								<img src="images/news_2.jpg" alt="https://unsplash.com/@dsmacinnes">
+                                                            <img src="images/img-02.jpg" alt="https://unsplash.com/@dsmacinnes">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">
@@ -89,51 +89,57 @@
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html">Our new courses just for you?</a>
+										<a href="news_post.html">Cuidado dental en niños</a>
 									</div>
 									<div class="news_post_meta">
-										<span class="news_post_author"><a href="#">By Christian Smith</a></span>
+										<span class="news_post_author"><a href="#">MedlinePlus</a></span>
 										<span>|</span>
-										<span class="news_post_comments"><a href="#">3 Comments</a></span>
+										<span class="news_post_comments"><a href="#">Informacion de salud para usted</a></span>
 									</div>
 								</div>
 							</div>
 							<div class="news_post_text">
-								<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies.</p>
+								<p>El cuidado apropiado de los dientes y las encías de los niños incluye cepillado y enjuague diariamente. También incluye hacerse exámenes dentales de rutina y recibir los tratamientos necesarios como fluoruro, sellantes, extracciones, rellenos o frenillos (correctores dentales) y otras ortodoncias..</p>
 							</div>
 							<div class="news_post_button text-center trans_200">
-								<a href="news_post.html">Read More</a>
+								<a href="https://medlineplus.gov/spanish/ency/article/002213.htm">Seguir Leyendo..</a>
 							</div>
 						</div>
 
 						<!-- News Post -->
 						<div class="news_post">
 							<div class="news_post_image">
-								<img src="images/news_3.jpg" alt="https://unsplash.com/@dsmacinnes">
+                                                            <img src="images/img-03.jpg" alt="https://unsplash.com/@dsmacinnes">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">
 									<div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-										<div>18</div>
-										<div>dec</div>
+										<div>20</div>
+										<div>may</div>
 									</div>
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html">Why take our graduate program??</a>
+										<a href="news_post.html">La importancia del Cuidado Dental Pediatrico.</a>
 									</div>
 									<div class="news_post_meta">
-										<span class="news_post_author"><a href="#">By Christian Smith</a></span>
+										<span class="news_post_author"><a href="#">Colgate</a></span>
 										<span>|</span>
-										<span class="news_post_comments"><a href="#">3 Comments</a></span>
+										<span class="news_post_comments"><a href="#">importancia pediatria</a></span>
 									</div>
 								</div>
 							</div>
 							<div class="news_post_text">
-								<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies.</p>
+                                                            <p>En lo que respecta a la salud de los dientes de leche de su hijo/a, no hay mejor momento que ahora para poner en práctica los excelentes hábitos de higiene bucal. El cuidado dental pediátrico asegura que los dientes de leche de su hijo se mantengan sanos, sin caries y otras enfermedades dentales.
+
+                                                                Introducción a la buena higiene bucal en los niños
+
+                                                                La buena higiene bucal comienza en los primeros años de vida. Ya sea que amamante o alimente a su hijo con biberón, debe comenzar a incorporar algún tipo de régimen de higiene dental lo antes posible. Antes de que erupcione el primer diente, limpie las encías con una gasa o un paño suave y húmedo. Una vez que los dientes comiencen a salir, manténgalos limpios. Usar las herramientas correctas es fundamental para este ritual diario. Por ejemplo, es importante comprar un cepillo dental diseñado especialmente para bebés, que tendrá un cabezal más chico, apto para sus bocas pequeñas.
+
+                                                                Si aún no lo ha hecho, asegúrese de que su hijo/a visite al dentista por primera vez cuando tenga de uno a dos años de edad. Su odontopediatra mantendrá saludables los dientes de su hijo/a removiendo la acumulación de placa y restos de alimentos que puedan quedar entre sus dientes. Ésta es una parte importante del cuidado dental, porque evita que las bacterias sigan creciendo, lo cual en última instancia puede provocar otras enfermedades dentales (ej.: caries o inflamación de las encías). Haga que las visitas periódicas al odontopediatra sean una aventura divertida que siempre termine con algún tipo de recompensa saludable para los dientes..</p>
 							</div>
 							<div class="news_post_button text-center trans_200">
-								<a href="news_post.html">Read More</a>
+								<a href="https://www.colgate.com/es-bo/oral-health/infant-oral-care/sw-281474979033837#:~:text=El%20cuidado%20dental%20pedi%C3%A1trico%20asegura,caries%20y%20otras%20enfermedades%20dentales.&text=La%20buena%20higiene%20bucal%20comienza%20en%20los%20primeros%20a%C3%B1os%20de%20vida.">Seguir Leyendo..</a>
 							</div>
 						</div>
 					</div>
@@ -143,8 +149,8 @@
 					<div class="news_page_nav">
 						<ul>
 							<li class="active text-center trans_200"><a href="#">01</a></li>
-							<li class="text-center trans_200"><a href="#">02</a></li>
-							<li class="text-center trans_200"><a href="#">03</a></li>
+							<!--<li class="text-center trans_200"><a href="#">02</a></li>-->
+                                                        <!--  <li class="text-center trans_200"><a href="#">03</a></li>-->
 						</ul>
 					</div>
 
@@ -155,25 +161,11 @@
 				<div class="col-lg-4">
 					<div class="sidebar">
 
-						<!-- Archives -->
-						<div class="sidebar_section">
-							<div class="sidebar_section_title">
-								<h3>Archives</h3>
-							</div>
-							<ul class="sidebar_list">
-								<li class="sidebar_list_item"><a href="#">Design Courses</a></li>
-								<li class="sidebar_list_item"><a href="#">All you need to know</a></li>
-								<li class="sidebar_list_item"><a href="#">Uncategorized</a></li>
-								<li class="sidebar_list_item"><a href="#">About Our Departments</a></li>
-								<li class="sidebar_list_item"><a href="#">Choose the right course</a></li>
-							</ul>
-						</div>
-
 						<!-- Latest Posts -->
 
 						<div class="sidebar_section">
 							<div class="sidebar_section_title">
-								<h3>Latest posts</h3>
+								<h3>Curiosidades sobre Pediatria.</h3>
 							</div>
 							
 							<div class="latest_posts">
@@ -181,39 +173,39 @@
 								<!-- Latest Post -->
 								<div class="latest_post">
 									<div class="latest_post_image">
-										<img src="images/latest_1.jpg" alt="https://unsplash.com/@dsmacinnes">
+                                                                            <img src="images/img-04.jpg" alt="https://www.guiainfantil.com/articulos/salud/dientes/mitos-sobre-la-primera-visita-al-dentista-de-los-ninos/#:~:text=Existen%20muchos%20mitos%20sobre%20la%20primera%20visita%20al,a%20partir%20de%20los%203%20o%204%20a%C3%B1os.">
 									</div>
-									<div class="latest_post_title"><a href="news_post.html">Why do you need a qualification?</a></div>
+									<div class="latest_post_title"><a href="news_post.html">1- El niño tiene que ir al dentista a partir de los 3 o 4 años.</a></div>
 									<div class="latest_post_meta">
-										<span class="latest_post_author"><a href="#">By Christian Smith</a></span>
+										<span class="latest_post_author"><a href="#">guiainfantil.com</a></span>
 										<span>|</span>
-										<span class="latest_post_comments"><a href="#">3 Comments</a></span>
+										<span class="latest_post_comments"><a href="#">Los mitos sobre la primera visita al dentista de los niños</a></span>
 									</div>
 								</div>
 
 								<!-- Latest Post -->
 								<div class="latest_post">
 									<div class="latest_post_image">
-										<img src="images/latest_2.jpg" alt="https://unsplash.com/@erothermel">
+                                                                            <img src="images/img-05.jpg" alt="https://www.guiainfantil.com/articulos/salud/dientes/mitos-sobre-la-primera-visita-al-dentista-de-los-ninos/#:~:text=Existen%20muchos%20mitos%20sobre%20la%20primera%20visita%20al,a%20partir%20de%20los%203%20o%204%20a%C3%B1os.">
 									</div>
-									<div class="latest_post_title"><a href="news_post.html">Why do you need a qualification?</a></div>
+									<div class="latest_post_title"><a href="news_post.html">2- Los niños tienen caries a partir de los seis años.</a></div>
 									<div class="latest_post_meta">
-										<span class="latest_post_author"><a href="#">By Christian Smith</a></span>
+										<span class="latest_post_author"><a href="#">guiainfantil.com</a></span>
 										<span>|</span>
-										<span class="latest_post_comments"><a href="#">3 Comments</a></span>
+										<span class="latest_post_comments"><a href="#">Los mitos sobre la primera visita al dentista de los niños</a></span>
 									</div>
 								</div>
 
 								<!-- Latest Post -->
 								<div class="latest_post">
 									<div class="latest_post_image">
-										<img src="images/latest_3.jpg" alt="https://unsplash.com/@element5digital">
+                                                                            <img src="images/img-06.jpg" alt="https://www.guiainfantil.com/articulos/salud/dientes/mitos-sobre-la-primera-visita-al-dentista-de-los-ninos/#:~:text=Existen%20muchos%20mitos%20sobre%20la%20primera%20visita%20al,a%20partir%20de%20los%203%20o%204%20a%C3%B1os.">
 									</div>
-									<div class="latest_post_title"><a href="news_post.html">Why do you need a qualification?</a></div>
+									<div class="latest_post_title"><a href="news_post.html">3- Hay que ir al dentista cuando nos moleste algún diente.</a></div>
 									<div class="latest_post_meta">
-										<span class="latest_post_author"><a href="#">By Christian Smith</a></span>
+										<span class="latest_post_author"><a href="#">guiainfantil.com</a></span>
 										<span>|</span>
-										<span class="latest_post_comments"><a href="#">3 Comments</a></span>
+										<span class="latest_post_comments"><a href="#">Los mitos sobre la primera visita al dentista de los niños</a></span>
 									</div>
 								</div>
 								
@@ -228,12 +220,12 @@
 								<h3>Tags</h3>
 							</div>
 							<div class="tags d-flex flex-row flex-wrap">
-								<div class="tag"><a href="#">Course</a></div>
-								<div class="tag"><a href="#">Design</a></div>
-								<div class="tag"><a href="#">FAQ</a></div>
-								<div class="tag"><a href="#">Teachers</a></div>
-								<div class="tag"><a href="#">School</a></div>
-								<div class="tag"><a href="#">Graduate</a></div>
+								<div class="tag"><a href="#">Higiene Dental</a></div>
+								<div class="tag"><a href="#">Empaste Dental</a></div>
+								<div class="tag"><a href="#">Puentes Dentales</a></div>
+								<div class="tag"><a href="#">Coronas Dentales</a></div>
+								<div class="tag"><a href="#">Extraccion Dental</a></div>
+								<div class="tag"><a href="#">Dentadura Postisa</a></div>
 							</div>
 						</div>
 

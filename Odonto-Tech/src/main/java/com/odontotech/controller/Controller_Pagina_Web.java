@@ -22,19 +22,40 @@ public class Controller_Pagina_Web extends HttpServlet {
                 case "Dentista_De_Niños":
                     request.getRequestDispatcher("View_DentistaDeNiños.jsp").forward(request, response);
                     break;
-                case "edit":
-
-                    request.getRequestDispatcher("View_DentistaDeÑiños").forward(request, response);
+                case "Higiene_Dental":
+                    request.getRequestDispatcher("View_HigieneDental.jsp").forward(request, response);
                     break;
-                case "delete":
-                    response.sendRedirect("Controller_Pacientes");
+                case "Empastes_Dentales":
+                    request.getRequestDispatcher("View_EmpastesDentales.jsp").forward(request, response);
+                    break;
+                case "Puentes_Dentales":
+                    request.getRequestDispatcher("View_Puentes_Dentales.jsp").forward(request, response);
+                    break;
+                case "Coronas_Dentales":
+                    request.getRequestDispatcher("View_CoronasDentales.jsp").forward(request, response);
+                    break;
+                case "Extraccion_Dental":
+                    request.getRequestDispatcher("View_ExtraccionDental.jsp").forward(request, response);
+                    break;
+                case "Dentadura_Postiza":
+                    request.getRequestDispatcher("View_DentaduraPostiza.jsp").forward(request, response);
+                    break;
+                case "Blanqueamiento_Dental":
+                    request.getRequestDispatcher("View_BlanqueamientoDental.jsp").forward(request, response);
+                    break;
+                case "Brakets":
+                    request.getRequestDispatcher("View_Brakets.jsp").forward(request, response);
+                    break;
+                case "Carillas_Dentales":
+                    request.getRequestDispatcher("View_CarillasDentales.jsp").forward(request, response);
+                    break;
+                case "Adhesion_Dental":
+                    request.getRequestDispatcher("View_AdhesionDental.jsp").forward(request, response);
                     break;
                 case "view":
-                    request.getRequestDispatcher("index.jsp").forward(request, response);  
-                    break;
-                case "index":
                     request.getRequestDispatcher("index.jsp").forward(request, response);
                     break;
+                    
             }
         } catch (Exception e) {
             System.out.println("Error Get" + e.getMessage());

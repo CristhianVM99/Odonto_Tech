@@ -928,7 +928,7 @@ section
 }
 .news_page_nav ul li.active
 {
-	background: #ffb606;
+	background: var(--color_principal);
 }
 .news_page_nav ul li:hover
 {
@@ -1060,7 +1060,7 @@ section
 .tag
 {
 	height: 40px;
-	background: #ffb606;
+	background: var(--color_principal);
 	margin-right: 12px;
 	margin-bottom: 10px;
 }

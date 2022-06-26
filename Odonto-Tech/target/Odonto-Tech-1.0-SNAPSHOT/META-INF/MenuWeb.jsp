@@ -27,46 +27,45 @@
             <div class="main_nav">
                 <ul class="main_nav_list">
                     <li class="main_nav_item menu_item--show">
-                        <a href="#" class="menu_link">Odontologia</a>
+                        <a href="#" class="menu_link">Odontologia<img src="images/arrow.svg" class="main_arrow"></a>
                         <ul class="main_nav_nesting">
                             <li class="main_nav_nesting_inside">
                                 <a href="Controller_Pagina_Web?view=Dentista_De_Niños" class="main_link menu_link--inside">Dentista de Niños</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Higiene Dental</a>
+                                <a href="Controller_Pagina_Web?view=Higiene_Dental" class="main_link menu_link--inside">Higiene Dental</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Empaste Dental</a>
+                                <a href="Controller_Pagina_Web?view=Empastes_Dentales" class="main_link menu_link--inside">Empaste Dental</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Puentes Dentales</a>
+                                <a href="Controller_Pagina_Web?view=Puentes_Dentales" class="main_link menu_link--inside">Puentes Dentales</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Coronas Dentales</a>
+                                <a href="Controller_Pagina_Web?view=Coronas_Dentales" class="main_link menu_link--inside">Coronas Dentales</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Extraccion Dental</a>
+                                <a href="Controller_Pagina_Web?view=Extraccion_Dental" class="main_link menu_link--inside">Extraccion Dental</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Dentadura Postisa</a>
+                                <a href="Controller_Pagina_Web?view=Dentadura_Postiza" class="main_link menu_link--inside">Dentadura Postisa</a>
                             </li>
                         </ul>
                     </li>
                     <li class="main_nav_item menu_item--show">
-                        <a href="#" class="menu_link">Odontologia Cosmetica</a>
-
+                        <a href="#" class="menu_link">Odontologia Cosmetica<img src="images/arrow.svg" class="main_arrow"></a>
                         <ul class="main_nav_nesting">
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Blanqueamieto Dental</a>
+                                <a href="Controller_Pagina_Web?view=Blanqueamiento_Dental" class="main_link menu_link--inside">Blanqueamieto Dental</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Brakets</a>
+                                <a href="Controller_Pagina_Web?view=Brakets" class="main_link menu_link--inside">Brakets</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Carrillas Dentales</a>
+                                <a href="Controller_Pagina_Web?view=Carillas_Dentales" class="main_link menu_link--inside">Carrillas Dentales</a>
                             </li>
                             <li class="main_nav_nesting_inside">
-                                <a href="#" class="main_link menu_link--inside">Adhesion Dental</a>
+                                <a href="Controller_Pagina_Web?view=Adhesion_Dental" class="main_link menu_link--inside">Adhesion Dental</a>
                             </li>
                         </ul>
 
@@ -104,10 +103,10 @@
             <ul class="menu_list menu_mm">
                 <li class="menu_item menu_mm"><a href="#">Odontologia</a></li>
                 <li class="menu_item menu_mm"><a href="#">Odontologia Cosmetica</a></li>
-                <li class="menu_item menu_mm"><a href="courses.html">Tarifa</a></li>
-                <li class="menu_item menu_mm"><a href="elements.html">Promociones</a></li>
-                <li class="menu_item menu_mm"><a href="news.html">Contactos</a></li>
-                <li class="menu_item menu_mm"><a href="news.html">Reservar Cita</a></li>
+                <li class="menu_item menu_mm"><a href="#">Tarifa</a></li>
+                <li class="menu_item menu_mm"><a href="#">Promociones</a></li>
+                <li class="menu_item menu_mm"><a href="#">Contactos</a></li>
+                <li class="menu_item menu_mm"><a href="#">Reservar Cita</a></li>
             </ul>
 
             <!-- Menu Social -->

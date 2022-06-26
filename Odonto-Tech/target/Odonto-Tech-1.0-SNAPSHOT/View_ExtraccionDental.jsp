@@ -1,14 +1,9 @@
-<%-- 
-    Document   : DentistaDeNiños
-    Created on : 25 jun. de 2022, 12:04:14
-    Author     : Cristian UPEA
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Odonto tech | Dentista de Niños</title>
+        <title>Odonto tech | Higiene Dental</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Course Project">

@@ -76,6 +76,7 @@ body
 	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
+        scroll-behavior: smooth;
 }
 div
 {
@@ -306,7 +307,7 @@ section
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+	transition: all 200ms ease;        
 }
 
 .header.scrolled
@@ -323,6 +324,9 @@ section
 {
 	width: calc(100% - 279px);
 	height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 }
 .header_content::before
 {
@@ -344,7 +348,7 @@ section
 .logo_container
 {
 	display: inline-block;
-	padding-left: 20px;
+
 }
 .logo span
 {
@@ -352,16 +356,15 @@ section
 	font-size: 22px; 
 	font-weight: bold;
 	color: #fff;
-	text-shadow: 1px 2px 5px rgba(0,0,0,.1),
+	text-shadow: 1px 4px 5px rgba(0,0,0,.1),
 				 1px 2px 7px rgba(0,0,0,.5);
 	vertical-align: middle;
 	text-transform: uppercase;
-	margin-left: 0px;
 }
 .logo img 
 {
 	width: 5.5vw;
-	filter: drop-shadow(1px 2px 15px #6B6B6B);
+	filter: drop-shadow(1px 2px 5px #6B6B6B);
 }
 
 /*********************************
@@ -370,28 +373,29 @@ section
 
 .main_nav_container
 {
-	
-	margin-left: auto;
-	
+	width: 70%;	
+}
+.main_nav_list 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .main_nav
 {
 	margin-top: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
 }
 .main_nav_item
-{
-	display: inline-block;        
-	margin-right:10px;
-        margin-left:10px;
+{        
 	position: relative;
 	--clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+        --transform: rotate(-90deg);
 }
-.main_nav_item:hover 
+.main_nav_item:hover
 {
 	--clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        --transform: rotate(0);
 }
 .main_nav_nesting
 {
@@ -409,6 +413,13 @@ section
 {
     background: var(--color_paleta_6);
     padding: 5px 0;
+}
+.main_arrow
+{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: inline-block;
+    margin-left: 3px;
 }
 .main_link 
 {
@@ -431,9 +442,10 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.main_nav_item a:hover
+.main_nav_item a:hover, 
+.main_nav_item a:hover img
 {
-	color: #00b2c3;
+    color: var(--color_principal);
 }
 
 /*********************************
@@ -458,7 +470,7 @@ section
 	font-size: 18px;
 	font-weight: 500;
 	color: #FFFFFF;
-	padding-left: 12px;
+
 }
 
 /*********************************
@@ -789,6 +801,8 @@ section
 	background: #FFFFFF;
 	z-index: 9;
 	cursor: pointer;
+        border-radius: 50%;
+        opacity: 0.5;
 }
 .hero_slider_nav:hover
 {
