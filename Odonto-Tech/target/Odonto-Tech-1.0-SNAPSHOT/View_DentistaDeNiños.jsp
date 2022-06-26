@@ -16,9 +16,7 @@
         <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
         <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="styles/news_styles.css">
-        <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
-        <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-        
+        <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">   
     </head>
     <body>
         <!-- Menu -->
@@ -27,10 +25,10 @@
         <!-- Home -->
         <div class="home">
             <div class="home_background_container prlx_parent">
-                <div class="home_background prlx" style="background-image:url(images/news_background.jpg)"></div>
+                <div class="home_background prlx" style="background-image:url(images/fondo-pagina3.jpg)"></div>
             </div>
             <div class="home_content">
-                <h1>The News</h1>
+                <h1>Dentista De Niños</h1>
             </div>
         </div>
         
@@ -47,31 +45,33 @@
 						<!-- News Post -->
 						<div class="news_post">
 							<div class="news_post_image">
-								<img src="images/news_1.jpg" alt="https://unsplash.com/@dsmacinnes">
+                                                            <img src="images/img-01.jpg" alt="https://unsplash.com/@dsmacinnes">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">
 									<div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-										<div>18</div>
-										<div>dec</div>
+										<div>20</div>
+										<div>Abril</div>
 									</div>
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html">Why do you need a qualification?</a>
+										<a href="news_post.html">¿Dentista De Niños?</a>
 									</div>
 									<div class="news_post_meta">
-										<span class="news_post_author"><a href="#">By Christian Smith</a></span>
+										<span class="news_post_author"><a href="#">American Academy of Pediatrics</a></span>
 										<span>|</span>
-										<span class="news_post_comments"><a href="#">3 Comments</a></span>
+										<span class="news_post_comments"><a href="#">vida familiar</a></span>
 									</div>
 								</div>
 							</div>
 							<div class="news_post_text">
-								<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies.</p>
+                                                            <p>Los dentistas pediátricos están dedicados a la salud bucal de los niños desde el nacimiento hasta la adolescencia. Tienen la experiencia y la preparación para atender los dientes, encías y bocas de los niños durante las varias etapas de la infancia.
+
+                                                                Los niños comienzan a formar sus dientes de leche durante los primeros 6 meses de vida. Hacia los 6 o 7 años de edad, comienzan a perder los dientes de leche, que serán sustituidos por los dientes permanentes. Sin un cuidado dental adecuado, los niños se enfrentan a posibles caries y enfermedades bucales que pueden causarles dolor y complicaciones durante toda la vida. En la actualidad, las caries de la primera infancia (una enfermedad infecciosa) son 5 veces más comunes en los niños que el asma y 7 veces más comunes que la fiebre del heno..</p>
 							</div>
 							<div class="news_post_button text-center trans_200">
-								<a href="news_post.html">Read More</a>
+								<a href="https://www.healthychildren.org/Spanish/family-life/health-management/pediatric-specialists/Paginas/What-is-a-Pediatric-Dentist.aspx">Seguir Leyendo...</a>
 							</div>
 						</div>
 

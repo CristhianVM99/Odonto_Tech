@@ -14,8 +14,11 @@
 
         <div class="logo_container">
             <div class="logo">
-                <a href="Controller_Pagina_Web?view=view"><img src="images/logo-4.png" alt=""></a>
-                <span>Odonto Tech.</span>
+                <a href="Controller_Pagina_Web?view=view">
+                    <img src="images/logo-4.png" alt="">
+                    <span>Odonto Tech.</span>
+                </a>
+                
             </div>
         </div>
 
@@ -25,45 +28,45 @@
                 <ul class="main_nav_list">
                     <li class="main_nav_item menu_item--show">
                         <a href="#" class="menu_link">Odontologia</a>
-                        <ul class="menu_nesting">
-                            <li class="menu_inside">
-                                <a href="Controller_Pagina_Web?view=Dentista_De_Niños" class="menu_link menu_link--inside">Dentista de Niños</a>
+                        <ul class="main_nav_nesting">
+                            <li class="main_nav_nesting_inside">
+                                <a href="Controller_Pagina_Web?view=Dentista_De_Niños" class="main_link menu_link--inside">Dentista de Niños</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Higiene Dental</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Higiene Dental</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Empaste Dental</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Empaste Dental</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Puentes Dentales</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Puentes Dentales</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Coronas Dentales</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Coronas Dentales</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Extraccion Dental</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Extraccion Dental</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Dentadura Postisa</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Dentadura Postisa</a>
                             </li>
                         </ul>
                     </li>
                     <li class="main_nav_item menu_item--show">
                         <a href="#" class="menu_link">Odontologia Cosmetica</a>
 
-                        <ul class="menu_nesting">
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Blanqueamieto Dental</a>
+                        <ul class="main_nav_nesting">
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Blanqueamieto Dental</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Brakets</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Brakets</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Carrillas Dentales</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Carrillas Dentales</a>
                             </li>
-                            <li class="menu_inside">
-                                <a href="#" class="menu_link menu_link--inside">Adhesion Dental</a>
+                            <li class="main_nav_nesting_inside">
+                                <a href="#" class="main_link menu_link--inside">Adhesion Dental</a>
                             </li>
                         </ul>
 
@@ -77,7 +80,7 @@
     </div>
     <div class="header_side d-flex flex-row justify-content-center align-items-center">
         <img src="images/phone-call.svg" alt="">
-        <span>Reservar Cita</span>
+        <a href="#"><span>Reservar Cita</span></a>
     </div>
 
     <!-- Hamburger -->
