@@ -62,7 +62,7 @@
                             <div class="hero_slide_background" style="background-image:url(images/fondo-pagina5.jpg)"></div>
                             <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                                 <div class="hero_slide_content text-center">
-                                    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Tu <span>Consulta No</span> Molesta</h1>
+                                    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Atencion de <span>Calidad</span></h1>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                                     <div class="course_author_image">
                                         <img src="images/perfil-doctor.jpg">
                                     </div>
-                                    <div class="course_author_name">Nombre Doctor |<span>Especialidad</span></div>
+                                    <div class="course_author_name">Nombre Doctor | <span>Especialidad</span></div>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                                     <div class="course_author_image">
                                         <img src="images/perfil-doctor.jpg">
                                     </div>
-                                    <div class="course_author_name">Nombre Doctor |<span>Especialidad</span></div>
+                                    <div class="course_author_name">Nombre Doctor | <span>Especialidad</span></div>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +178,7 @@
                                     <div class="course_author_image">
                                         <img src="images/perfil-doctor.jpg">
                                     </div>
-                                    <div class="course_author_name">Michael Smith |<span>Higiene Dental</span></div>
+                                    <div class="course_author_name">Michael Smith | <span>Higiene Dental</span></div>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@
                                                     <img src="images/desarroladores.jpg" alt="">
                                                 </div>
                                                 <div class="testimonial_name">Cristhian Villca Mamani</div>
-                                                <div class="testimonial_title">Ingeniero De Sistemas / Desarrolladores Web</div>
+                                                <div class="testimonial_title">Ingeniero De Sistemas | Desarrolladores Web</div>
                                             </div>
                                         </div>
                                     </div>
@@ -303,7 +303,7 @@
                                                     <img src="images/desarroladores.jpg" alt="">
                                                 </div>
                                                 <div class="testimonial_name">Cecilio Poma Muñoz</div>
-                                                <div class="testimonial_title">Ingeniero De Sistemas / Desarrollador Backend</div>
+                                                <div class="testimonial_title">Ingeniero De Sistemas | Desarrollador Backend</div>
                                             </div>
                                         </div>
                                     </div>
@@ -332,7 +332,7 @@
                 </div>
             </div>
 
-            <!-- Noticias y Blogs -->
+            <!-- NOTICIAS Y BLOGS -->
 
             <div class="events page_section" id="noticiasyblogs">
                 <div class="container">
@@ -347,7 +347,7 @@
 
                     <div class="event_items">
 
-                        <!-- Event Item -->
+                        <!-- NOTICIA 1 -->
                         <div class="row event_item">
                             <div class="col">
                                 <div class="row d-flex flex-row align-items-end">
@@ -369,7 +369,7 @@
 
                                     <div class="col-lg-4 order-lg-3 order-1">
                                         <div class="event_image">
-                                            <img src="images/noticia-img.jpg" alt="https://unsplash.com/@theunsteady5">
+                                            <img src="images/noticia-img.jpg">
                                         </div>
                                     </div>
 
@@ -377,7 +377,7 @@
                             </div>
                         </div>
 
-                        <!-- Event Item -->
+                        <!-- NOTICIA 2 -->
                         <div class="row event_item">
                             <div class="col">
                                 <div class="row d-flex flex-row align-items-end">
@@ -399,7 +399,7 @@
 
                                     <div class="col-lg-4 order-lg-3 order-1">
                                         <div class="event_image">
-                                            <img src="images/noticia-img.jpg" alt="https://unsplash.com/@claybanks1989">
+                                            <img src="images/noticia-img.jpg">
                                         </div>
                                     </div>
 
@@ -407,7 +407,7 @@
                             </div>
                         </div>
 
-                        <!-- Event Item -->
+                        <!-- NOTICIA 3 -->
                         <div class="row event_item">
                             <div class="col">
                                 <div class="row d-flex flex-row align-items-end">
@@ -429,7 +429,7 @@
 
                                     <div class="col-lg-4 order-lg-3 order-1">
                                         <div class="event_image">
-                                            <img src="images/noticia-img.jpg" alt="https://unsplash.com/@juanmramosjr">
+                                            <img src="images/noticia-img.jpg">
                                         </div>
                                     </div>
 
@@ -441,10 +441,13 @@
 
                 </div>
             </div>
+            
             <!-- Footer de las paginas web -->
             <jsp:include page="META-INF/FooterWeb.jsp"></jsp:include>
         </div>
-
+        
+        <!-- ENLACES JAVASCRIPT -->
+        
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="styles/bootstrap4/popper.js"></script>
         <script src="styles/bootstrap4/bootstrap.min.js"></script>
