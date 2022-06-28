@@ -108,11 +108,25 @@
                                                 </c:if>
                                             </div>
                                         </div>
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Estado *</label>
+                                                <select name="festado" class="form-control" required>
+                                                    <option value=""  >--Seleccione--</option>
+                                                    <option value="habilitado" <%=n.getEstado().equals("habilitado") ? "selected" : ""%> >
+                                                        Habilitado</option>
+                                                    <option value="desabilitado"  <%=n.getEstado().equals("desabilitado") ? "selected" : ""%>>
+                                                        Desabilidado</option>
+
+                                                </select>
+                                            </div>
+                                        </div>   
                                         <div class="col-xs-12 ">
                                             <div class="form-group label-floating">
 
                                                 <button class="btn btn-info btn-raised btn-sm"> 
-                                                    <input class="form-control" type="file" name="fimagen" id="img">
+                                                    <input class="form-control" type="file" name="fimagen" id="img"
+                                                           <%=n.getId() == 0 ? "required" : ""%>  >
                                                     subir Imagen </button>
                                                 <label class="form-group label-floating" id="vista">
                                                     <img src="<%=request.getContextPath()%>/ControllerWrite?table=noticias&fid=<%=n.getId()%>" height="250" width="250">

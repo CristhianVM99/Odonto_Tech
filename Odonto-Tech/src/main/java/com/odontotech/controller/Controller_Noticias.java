@@ -55,7 +55,8 @@ public class Controller_Noticias extends HttpServlet {
                 n.setContenido(valores_dao[6]);
                 n.setFecha(Date.valueOf(valores_dao[8]));
                 n.setId_doctor(Integer.parseInt(valores_dao[10]));
-
+                n.setEstado(valores_dao[12]);
+                
                 request.setAttribute("noti", n);
                 request.setAttribute("valor", "modificar");
                 request.getRequestDispatcher("FrmNoticias.jsp").forward(request, response);
@@ -96,6 +97,8 @@ public class Controller_Noticias extends HttpServlet {
         Part imagen = request.getPart("fimagen");
         String fecha = request.getParameter("ffecha");
         int id_doctor = Integer.parseInt(request.getParameter("fid_doctor"));
+        String estado =request.getParameter("festado");
+        
         
         Noticias n= new Noticias();
         n.setId(id);
@@ -103,6 +106,7 @@ public class Controller_Noticias extends HttpServlet {
         n.setContenido(contenido);
         n.setFecha(Date.valueOf(fecha));
         n.setId_doctor(id_doctor);
+        n.setEstado(estado);
         
         genericDAO dao= new genericDAOimplements(); 
     

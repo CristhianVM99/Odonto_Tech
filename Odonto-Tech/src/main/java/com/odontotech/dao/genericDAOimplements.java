@@ -208,7 +208,46 @@ public class genericDAOimplements extends Conection implements genericDAO {
        
         return lista_image;
     }
+@Override
+public List<GenericClass> select_estado(String table) throws Exception{
+       List<GenericClass> lista = new ArrayList<>();
+ 
+        String[] campos = verific_select_generic(table);
+        String sql = "SELECT ";
 
+        //armamos los campos
+        for (int i = 1; i < campos.length; i++) {
+            if (i % 2 != 0) {
+                sql = sql + campos[i] + ",";
+            }
+        }
+        sql = sql.substring(0, sql.length() - 1);//kitamos la ultima coma(,)
+        //unimos los campos +tabla +  where 
+        sql = sql + " FROM " + campos[0]+" where estado='habilitado'";
+        this.conectar();
+        int indiceCampos = 1;
+        PreparedStatement ps = this.conn.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            indiceCampos = 1;
+            campos = verific_select_generic(table);
+            for (int i = 1; i < campos.length; i++) {
+                if (i % 2 == 0)//en los indices pares se llenan los valores
+                {
+                    campos[i] = rs.getString(indiceCampos);
+                    indiceCampos++;
+                }
+
+            }
+            GenericClass cl = new GenericClass();
+            cl.setToString(campos);
+            lista.add(cl);
+        }
+
+      this.desconn();
+        return lista;
+}
 //mis metodos no abstractos
     private String[] verific_insert(String val,byte[] img) {
         val = val.replace("{", ";");

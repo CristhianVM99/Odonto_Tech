@@ -72,16 +72,73 @@
                     <div class="panel-body">
                         <form action="Controller_Promociones"  method="post" enctype="multipart/form-data">
                             <input type="hidden" name="fid" value="${promo.id}">
-                            <!-- Se debe obtener el valor  de la lista especialidades--> 
-                            <input type="hidden" name="fid_especialidad" value="2">
+                         
+                           
                             <fieldset>
                                 <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos</legend>
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <div class="form-group label-floating">
+                                            <div class="form-group">
                                                 <label class="control-label">Servicio *</label>
-                                                <input  class="form-control" type="text" name="fservicio" value="${promo.servicio}" required >
+                                                <select class="form-control" name="fservicio" required>
+                                                    <option value="">--Seleccione--</option>
+                                                    <option 
+                                                        <c:if test="${promo.servicio=='Dentista de Niños'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Dentista de Niños</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Higiene Dental'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Higiene Dental</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Empaste Dentales'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Empastes Dentales</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Puentes Dentales'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Puentes Dentales</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Coronas Dentales'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Coronas Dentales</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Extraccion Dental'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Extraccion Dental</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Dentadura Postisa'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Dentadura Postisa</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Blanqueamiento Dental'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Blanqueamiento Dental</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Brakets'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Brakets</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Carrillas Dentales'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Carrillas Dentales</option>
+                                                    <option
+                                                        <c:if test="${promo.servicio=='Adhesion Dental'}" var="serv">
+                                                        selected
+                                                        </c:if>
+                                                        >Adhesion Dental</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
@@ -91,16 +148,37 @@
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
-                                            <div class="form-group label-floating">
+                                            <div class="form-group">
                                                 <!-- Se debe obtener el valor  de la lista especialidades--> 
                                                 <label class="control-label">Nombre Especialidad *</label>
-                                                <input  class="form-control" type="text" name="fnombre_especialidad" value="${promo.nombre_especialidad}" required>
+                                                <select name="fid_especialidad" class="form-control">
+                                                    <option value="">--Seleccione--</option>
+                                                    <c:forEach var="es" items="${lis_es}">
+                                           <option value="${es.id}"
+                                                   <c:if test="${es.id==promo.id_especialidad}" var="espe">selected</c:if>
+                                                   >${es.nombre_especialidad}</option>
+                                                    </c:forEach>
+                                            </select>
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Estado *</label>
+                                                <select name="festado" class="form-control" required>
+                                                    <option value=""  >--Seleccione--</option>
+                                                    <option value="habilitado" <c:if test="${promo.estado=='habilitado'}">selected</c:if> >
+                                                        Habilitado</option>
+                                                    <option value="desabilitado" <c:if test="${promo.estado=='desabilitado'}">selected</c:if>  >
+                                                        Desabilidado</option>
+
+                                                </select>
+                                            </div>
+                                        </div>  
+                                        <div class="col-xs-12">
                                             <div class="form-group label-floating">
                                                 <button   class="btn btn-info btn-raised btn-sm"
-                                                          ><input  class="form-control" type="file" name="fimagen" id="img"  >Subir Imagen *</button>
+                                                          ><input  class="form-control" type="file" name="fimagen" id="img"  
+                                                         <c:if test="${promo.id==0}">required</c:if> >Subir Imagen *</button>
                                                 <label class="form-group label-floating" id="vista"> 
                                                     <img src="<%=request.getContextPath()%>/ControllerWrite?table=promociones&fid=${promo.id}" height="250" width="250"/>
                                                 </label>

@@ -75,6 +75,8 @@ List<GenericClass> list=(List<GenericClass>) request.getAttribute("lis");
 									<th class="text-center">PRECIO</th>
 									<th class="text-center">IMAGEN</th>
 									<th class="text-center">NOMBRE ESPECIALIDAD</th>
+									<th class="text-center">ESTADO</th>
+									<th class="text-center">TIPO DE TARIFA</th>
 									<th class="text-center">ACTUALIZAR</th>
 									<th class="text-center">ELIMINAR</th>
 								</tr>
@@ -92,6 +94,8 @@ List<GenericClass> list=(List<GenericClass>) request.getAttribute("lis");
                                                                         <td><img src="<%=request.getContextPath()%>/ControllerWrite?table=tarifas&fid=<%=e[2]%>" 
                                                                                  height="150" width="150"   ></td>
                                                                         <td><%=e[10]%></td>
+                                                                        <td><%=e[12]%></td>
+                                                                        <td><%=e[14]%></td>
 									<td>
                                                                             <a href="Controller_Tarifas?action=edit&fid=<%=e[2]%>" class="btn btn-success btn-raised btn-xs">
 											<i class="zmdi zmdi-refresh"></i>

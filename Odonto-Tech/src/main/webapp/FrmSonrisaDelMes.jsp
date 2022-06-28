@@ -54,6 +54,7 @@
                                 <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; REGISTRO DE SONRISAS DEL MES
                             </a>
                         </li>
+
                     </ul>
                 </div>
 
@@ -72,7 +73,7 @@
                     <div class="panel-body">
                         <form action="Controller_Sonrisa_Del_Mes" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="fid" value="${sonrisa.id}">
-                 
+
 
                             <fieldset>
                                 <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos</legend>
@@ -85,9 +86,9 @@
                                                     <option value="">--Seleccione--</option>
                                                     <c:forEach var="pac" items="${paciente}">
                                                         <option value="${pac.ci}"<c:if test="${pac.ci==sonrisa.ci_paciente}" var="sel">selected</c:if> >
-                                                        ${pac.nombre}</option> 
-                                                    </c:forEach>
-                                                 </select>                 
+                                                            ${pac.nombre}</option> 
+                                                        </c:forEach>
+                                                </select>                 
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
@@ -101,8 +102,8 @@
                                                                     selected  
                                                                 </c:if> 
                                                                 >
-                                                        ${valor_doctor.nombre}</option>
-                                                     </c:forEach>   
+                                                            ${valor_doctor.nombre}</option>
+                                                        </c:forEach>   
                                                 </select>
                                             </div>
                                         </div>
@@ -112,14 +113,28 @@
                                                 <input  class="form-control" type="text" name="fdescripcion" required value="${sonrisa.descripcion}">
                                             </div>
                                         </div>
-
                                         <div class="col-xs-12">
-                                            <div class="form-group label-floating">       
-                                                <button class="btn btn-info btn-raised btn-sm">
-                                                    <input class="form-control" type="file" name="fimagen" id="img">
-                                                    Subir Imagen</button>
-                                                <label class="form-group label-floating" id="vista">
-                                                    <img src="<%=request.getContextPath()%>/ControllerWrite?table=sonrisa_del_mes&fid=${sonrisa.id}"
+                                            <div class="form-group">
+                                                <label class="control-label">Estado *</label>
+                                                <select name="festado" class="form-control" required>
+                                                    <option value=""  >--Seleccione--</option>
+                                                    <option value="habilitado" <c:if test="${sonrisa.estado=='habilitado'}" var="vv">selected </c:if>>
+                                                        Habilitado</option>
+                                                    <option value="desabilitado"  <c:if test="${sonrisa.estado=='desabilitado'}" var="vv">selected </c:if> >
+                                                        Desabilidado</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12">
+                                                <div class="form-group label-floating">       
+                                                    <button class="btn btn-info btn-raised btn-sm">
+                                                        <input class="form-control" type="file" name="fimagen" id="img" 
+                                                        <c:if test="${sonrisa.id==0}" var="req"> required</c:if> >
+                                                        Subir Imagen</button>
+                                                    <label class="form-group label-floating" id="vista">
+                                                        <img src="<%=request.getContextPath()%>/ControllerWrite?table=sonrisa_del_mes&fid=${sonrisa.id}"
                                                          height="250" width="250">              
                                                 </label>
                                             </div>

@@ -21,5 +21,7 @@ public interface genericDAO {
     public List<GenericClass> select(String table) throws Exception;
     
     public  List<GenericClass> select_image(String table) throws Exception;
+    
+    public  List<GenericClass> select_estado(String table) throws Exception;
   
 }

@@ -11,6 +11,7 @@ public class Promociones {
  private byte[] imagen;
  private int id_especialidad;
  private String nombre_especialidad;
+ private String estado;
 
     public Promociones() {
         this.id = 0;
@@ -28,6 +29,7 @@ public class Promociones {
         this.imagen = imagen;
         this.id_especialidad = id_especialidad;
         this.nombre_especialidad = nombre_especialidad;
+        this.estado="";
     }
 
     public int getId() {
@@ -77,10 +79,16 @@ public class Promociones {
     public void setNombre_especialidad(String nombre_especialidad) {
         this.nombre_especialidad = nombre_especialidad;
     }
+  public String getEstado() {
+        return estado;
+    }
 
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
     @Override
     public String toString() {
-        return "Promociones{" + "id=" + id + ", servicio=" + servicio + ", precio=" + precio + ", id_especialidad=" + id_especialidad + ", nombre_especialidad=" + nombre_especialidad + '}';
+        return "Promociones{" + "id=" + id + ", servicio=" + servicio + ", precio=" + precio + ", id_especialidad=" + id_especialidad + ", nombre_especialidad=" + nombre_especialidad +", estado="+estado+ '}';
     }
 
 }

@@ -83,6 +83,7 @@ public class Controller_Sonrisa_Del_Mes extends HttpServlet {
                     son.setDescripcion(val_dao[8]);
                     son.setId_doctor(Integer.parseInt(val_dao[10]));
                     son.setCi_paciente(val_dao[12]);
+                    son.setEstado(val_dao[14]);
                     
                        lis_doctor = dao.select("doctores");
                     for (GenericClass cls : lis_doctor) {
@@ -146,7 +147,7 @@ public class Controller_Sonrisa_Del_Mes extends HttpServlet {
         String descripcion = request.getParameter("fdescripcion");
         int id_doctor = Integer.parseInt(request.getParameter("fid-doctor"));
         String ci_paciente = request.getParameter("fci-paciente");
-
+        String estado=request.getParameter("festado");
         Sonrisa_del_mes son = new Sonrisa_del_mes();
 
 
@@ -176,6 +177,7 @@ public class Controller_Sonrisa_Del_Mes extends HttpServlet {
        son.setDescripcion(descripcion);
         son.setId_doctor(id_doctor);
         son.setCi_paciente(ci_paciente);
+        son.setEstado(estado);
             //ejecutamos segun los metodos pedidos del formulario
             if (id == 0) {
                 dao.insert(son.toString(), son.getImagen());

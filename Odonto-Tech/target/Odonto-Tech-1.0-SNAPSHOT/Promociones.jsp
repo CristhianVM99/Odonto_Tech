@@ -70,6 +70,7 @@
                                             <th class="text-center">PRECIO</th>
                                             <th class="text-center">IMAGEN</th>
                                             <th class="text-center">NOMBRE ESPECIALIDAD</th>
+                                            <th class="text-center">ESTADO</th>
                                             <th class="text-center">ACTUALIZAR</th>
                                             <th class="text-center">ELIMINAR</th>
                                         </tr>
@@ -84,6 +85,7 @@
                                                 <img src="<%=request.getContextPath()%>/ControllerWrite?table=promociones&fid=${valores.id}" height="150" width="150">
                                             </td>
                                             <td>${valores.nombre_especialidad}</td>
+                                            <td>${valores.estado}</td>
                                             <td>
                                                 <a href="Controller_Promociones?action=edit&fid=${valores.id}" class="btn btn-success btn-raised btn-xs">
                                                     <i class="zmdi zmdi-refresh"></i>

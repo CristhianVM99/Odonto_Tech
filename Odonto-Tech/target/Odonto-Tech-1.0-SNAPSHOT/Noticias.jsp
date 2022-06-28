@@ -27,7 +27,7 @@
                             <a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
                         </li>
                         <li>
-                            <a href="search.html" class="btn-search">
+                            <a href="#" class="btn-search">
                                 <i class="zmdi zmdi-search"></i>
                             </a>
                         </li>
@@ -76,7 +76,7 @@
                                             <th class="text-center">CONTENIDO</th>
                                             <th class="text-center">IMAGEN</th>
                                             <th class="text-center">FECHA</th>
-                                            <th class="text-center">ID DOCTOR</th>
+                                            <th class="text-center">ESTADO</th>
                                             <th class="text-center">ACTUALIZAR</th>
                                             <th class="text-center">ELIMINAR</th>
                                         </tr>
@@ -92,7 +92,7 @@
                                         <td><img src="<%=request.getContextPath()%>/ControllerWrite?table=noticias&fid=<%=val[2]%>" height="150" width="150"></td>
                                             <%Date fecha = Date.valueOf(val[8]); //para convertir String a  date%>
                                         <td><%=new DateFormat("dd/MMMM/yyyy", fecha).getDateConvert()%></td>
-                                        <td><%=val[10]%></td>
+                                        <td><%=val[12]%></td>
                                         <td>
                                             <a href="Controller_Noticias?action=edit&fid=<%=val[2]%>" class="btn btn-success btn-raised btn-xs">
                                                 <i class="zmdi zmdi-refresh"></i>
