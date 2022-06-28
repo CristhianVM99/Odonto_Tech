@@ -10,6 +10,7 @@ public class Noticias {
     private byte[] imagen;
     private Date fecha;
     private int id_doctor;
+    private String estado;
 
     public Noticias(int id, String titulo, String contenido, byte[] imagen, Date fecha, int id_doctor) {
         this.id = id;
@@ -27,6 +28,7 @@ public class Noticias {
         this.imagen = null;
         this.fecha = null;
         this.id_doctor = 0;
+        this.estado = "";
     }
     // mis metodos getters y setters
 
@@ -53,31 +55,42 @@ public class Noticias {
     public void setContenido(String contenido) {
         this.contenido = contenido;
     }
-    public byte[] getImagen(){
+
+    public byte[] getImagen() {
         return this.imagen;
     }
-    public void setImagen(byte[] imagen){
-        this.imagen=imagen;
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
     }
-    public Date getFecha()
-    {
+
+    public Date getFecha() {
         return this.fecha;
     }
-    public void setFecha(Date fecha)
-    {
-        this.fecha=fecha;
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
-    public int getId_doctor(){
+
+    public int getId_doctor() {
         return this.id_doctor;
     }
-    public void setId_doctor(int id_doctor)
-    {
-        this.id_doctor=id_doctor;
+
+    public void setId_doctor(int id_doctor) {
+        this.id_doctor = id_doctor;
+    }
+
+    public String getEstado() {
+        return this.estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     @Override
     public String toString() {
-        return "Noticias{" + "id=" + id + ", titulo=" + titulo + ", contenido=" + contenido + ", fecha=" + fecha + ", id_doctor=" + id_doctor + '}';
+        return "Noticias{" + "id=" + id + ", titulo=" + titulo + ", contenido=" + contenido + ", fecha=" + fecha + ", id_doctor=" + id_doctor + ", estado=" + estado + '}';
     }
-    
+
 }//class

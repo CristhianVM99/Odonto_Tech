@@ -30,7 +30,7 @@
                 <!-- Content page -->
                 <div class="container-fluid">
                     <div class="page-header">
-                        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Sonrisa del mes <small>ODONTO TECH</small></h1>
+                        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Usuarios <small>ODONTO TECH</small></h1>
                     </div>
                     <p class="lead">Clinita odontologica ODONTO TECH,
                         proporciona diferentes especialidades ,a los pacientes,

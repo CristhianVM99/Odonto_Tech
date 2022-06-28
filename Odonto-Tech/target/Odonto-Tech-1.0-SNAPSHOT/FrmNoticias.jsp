@@ -78,7 +78,7 @@
                     <div class="panel-body">
                         <form action="Controller_Noticias" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="fid" value="<%=n.getId()%>">
-                            <input type="hidden" name="fid_doctor" value="1"%>
+          
                             <!-- se debe recuperar el id del doctor de la tabla usuarios  -->
                        <!--  <input type="hidden" name="fid_doctor" value=<%=n.getId_doctor()%>>-->
                             <fieldset>
@@ -108,11 +108,41 @@
                                                 </c:if>
                                             </div>
                                         </div>
+                                           <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Nombre doctor *</label>
+                                                <select name="fid_doctor" class="form-control" required>
+                                                    <option value=""  >--Seleccione--</option>
+                                                    <c:forEach var="valor_doctor" items="${lis_doc}">
+                                                        <option value="${valor_doctor.id}"
+                                                                <c:if test="${noti.id_doctor==valor_doctor.id}" var="sss">
+                                                                    selected  
+                                                                </c:if> 
+                                                                >
+                                                            ${valor_doctor.nombre}</option>
+                                                        </c:forEach>   
+                                                </select>
+                                            </div>
+                                        </div>   
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Estado *</label>
+                                                <select name="festado" class="form-control" required>
+                                                    <option value=""  >--Seleccione--</option>
+                                                    <option value="habilitado" <%=n.getEstado().equals("habilitado") ? "selected" : ""%> >
+                                                        Habilitado</option>
+                                                    <option value="desabilitado"  <%=n.getEstado().equals("desabilitado") ? "selected" : ""%>>
+                                                        Desabilidado</option>
+
+                                                </select>
+                                            </div>
+                                        </div>   
                                         <div class="col-xs-12 ">
                                             <div class="form-group label-floating">
 
                                                 <button class="btn btn-info btn-raised btn-sm"> 
-                                                    <input class="form-control" type="file" name="fimagen" id="img">
+                                                    <input class="form-control" type="file" name="fimagen" id="img"
+                                                           <%=n.getId() == 0 ? "required" : ""%>  >
                                                     subir Imagen </button>
                                                 <label class="form-group label-floating" id="vista">
                                                     <img src="<%=request.getContextPath()%>/ControllerWrite?table=noticias&fid=<%=n.getId()%>" height="250" width="250">
