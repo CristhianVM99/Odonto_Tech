@@ -1,4 +1,11 @@
-
+<%@page import="java.sql.Date"%>
+<%@page import="com.odontotech.utiles.DateFormat"%>
+<%@page import="com.odontotech.model.Noticias"%>
+<%
+    Noticias n = (Noticias) request.getAttribute("noti");
+    Date fechaActual = Date.valueOf(new DateFormat("yyyy-MM-dd").getDateHoy());
+%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,117 +18,112 @@
     <body>
         <!-- Menu -->
         <jsp:include page="META-INF/Menu.jsp"></jsp:include>
+            <!-- Content page-->
 
-        <!-- Content page-->
-        <section class="full-box dashboard-contentPage">
-            <!-- NavBar -->
-            <nav class="full-box dashboard-Navbar">
-                <ul class="full-box list-unstyled text-right">
-                    <li class="pull-left">
-                        <a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
-                    </li>
-                    <li>
-                        <a href="search.html" class="btn-search">
-                            <i class="zmdi zmdi-search"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Content page -->
-            <div class="container-fluid">
-                <div class="page-header">
-                    <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> AdministraciÃ³n <small>EMPRESA</small></h1>
+            <section class="full-box dashboard-contentPage">
+                <!-- NavBar -->
+                <nav class="full-box dashboard-Navbar">
+                    <ul class="full-box list-unstyled text-right">
+                        <li class="pull-left">
+                            <a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-search">
+                                <i class="zmdi zmdi-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Content page -->
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Noticias <small>ODONTO TECH</small></h1>
+                    </div>
+                    <p class="lead">Clinita odontologica ODONTO TECH,
+                        proporciona diferentes especialidades ,a los pacientes,
+                        como ser historial clinico, agentadar citas,
+                        promocionar e informar a los pacientes
+                        sobre la salud bucal e higinie.</p>
                 </div>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
-            </div>
 
-            <div class="container-fluid">
-                <ul class="breadcrumb breadcrumb-tabs">
-                    <li>
-                        <a href="Noticias.jsp" class="btn btn-info">
-                            <i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE ESPECIALIDADES
-                        </a>
-                    </li>
-                    <li>
-                        <a href="FrmNoticias.jsp" class="btn btn-success">
-                            <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVA ESPECIALIDAD
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <div class="container-fluid">
+                    <ul class="breadcrumb breadcrumb-tabs">
+                        <li>
+                            <a href="Controller_Noticias" class="btn btn-info">
+                                <i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE NOTICIAS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Controller_Noticias?action=add" class="btn btn-success">
+                                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; REGISTRO DE NOTICIAS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <!-- panel datos de la empresa -->
-            <div class="container-fluid">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; DATOS DE LA EMPRESA</h3>
+                <!-- panel datos de la empresa -->
+                <div class="container-fluid">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp;
+                            <c:if test="${valor=='nuevo'}" var="titulo" scope="request">
+                                NUEVA
+                            </c:if>
+                            <c:if test="${requestScope.valor=='modificar'}" var="titulo"  scope="request">
+                                EDITAR
+                            </c:if>
+                            NOTICIA
+                        </h3>
                     </div>
                     <div class="panel-body">
-                        <form>
+                        <form action="Controller_Noticias" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="fid" value="<%=n.getId()%>">
+                            <input type="hidden" name="fid_doctor" value="1"%>
+                            <!-- se debe recuperar el id del doctor de la tabla usuarios  -->
+                       <!--  <input type="hidden" name="fid_doctor" value=<%=n.getId_doctor()%>>-->
                             <fieldset>
-                                <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos bÃ¡sicos</legend>
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">DNI/CÃDIGO/NÃMERO DE REGISTRO *</label>
-                                                <input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-reg" required="" maxlength="30">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Nombre de la empresa *</label>
-                                                <input pattern="[a-zA-Z0-9Ã¡Ã©Ã­Ã³ÃºÃÃÃÃÃÃ±Ã ]{1,40}" class="form-control" type="text" name="nombre-reg" required="" maxlength="40">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">TelÃ©fono</label>
-                                                <input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" maxlength="15">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">E-mail</label>
-                                                <input class="form-control" type="email" name="email-reg" maxlength="50">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">DirecciÃ³n</label>
-                                                <input class="form-control" type="text" name="direccion-reg" maxlength="170">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <br>
-                            <fieldset>
-                                <legend><i class="zmdi zmdi-assignment-o"></i> &nbsp; Otros datos</legend>
+                                <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos</legend>
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">Nombre del gerente o director *</label>
-                                                <input pattern="[a-zA-Z0-9Ã¡Ã©Ã­Ã³ÃºÃÃÃÃÃÃ±Ã]{1,50}" class="form-control" type="text" name="director-reg" required="" maxlength="50">
+                                                <label class="control-label">Titulo *</label>
+                                                <input  class="form-control" type="text" name="ftitulo" required value="<%=n.getTitulo()%>">
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-6">
+                                        <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">SÃ­mbolo de moneda *</label>
-                                                <input class="form-control" type="text" name="moneda-reg" required="" maxlength="1">
+                                                <label class="control-label">Contenido *</label>
+                                                <input  class="form-control" type="text" name="fcontenido" required  value="<%=n.getContenido()%>" >
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-6">
+                                        <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">AÃ±o *</label>
-                                                <input pattern="[0-9]{4,4}" class="form-control" type="text" name="year-reg" required="" maxlength="4">
+                                                <label class="control-label">Fecha *</label>
+                                                <c:if test="${noti.id==0}" var="fecha" >       
+                                                    <input  class="form-control" type="date" name="ffecha" required value="<%=fechaActual%>" min="<%=fechaActual%>">
+                                                </c:if>
+                                                <c:if test="${noti.id!=0}" var="fecha" >       
+                                                    <input  class="form-control" type="date" name="ffecha" required value="<%=n.getFecha()%>" min="<%=n.getFecha()%>">
+                                                </c:if>
                                             </div>
                                         </div>
+                                        <div class="col-xs-12 ">
+                                            <div class="form-group label-floating">
+
+                                                <button class="btn btn-info btn-raised btn-sm"> 
+                                                    <input class="form-control" type="file" name="fimagen" id="img">
+                                                    subir Imagen </button>
+                                                <label class="form-group label-floating" id="vista">
+                                                    <img src="<%=request.getContextPath()%>/ControllerWrite?table=noticias&fid=<%=n.getId()%>" height="250" width="250">
+
+                                                </label>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </fieldset>
-                            <br>
                             <p class="text-center" style="margin-top: 20px;">
                                 <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
                             </p>
@@ -140,6 +142,7 @@
         <script src="./js/ripples.min.js"></script>
         <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/previewfile.js"></script>
         <script>
             $.material.init();
         </script>

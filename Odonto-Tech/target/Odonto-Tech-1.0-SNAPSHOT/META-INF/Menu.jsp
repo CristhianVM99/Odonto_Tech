@@ -46,16 +46,16 @@
                         <a href="Proveedores.jsp"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
                     </li>
                     <li>
-                        <a href="Promociones.jsp"><i class="zmdi zmdi-label zmdi zzmdi-hc-fw"></i> Promociones </a>
+                        <a href="Controller_Promociones"><i class="zmdi zmdi-label zmdi zzmdi-hc-fw"></i> Promociones </a>
                     </li>
                     <li>
-                        <a href="Noticias.jsp"><i class="zmdi zmdi-roller zmdi zmdi-hc-fw"></i> Noticias </a>
+                        <a href="Controller_Noticias"><i class="zmdi zmdi-roller zmdi zmdi-hc-fw"></i> Noticias </a>
                     </li>
                     <li>
-                        <a href="SonrisaDelMes.jsp"><i class="zmdi zmdi-pizza zmdi zmdi-hc-fw"></i> Sonrisa Del Mes </a>
+                        <a href="Controller_Sonrisa_Del_Mes"><i class="zmdi zmdi-pizza zmdi zmdi-hc-fw"></i> Sonrisa Del Mes </a>
                     </li>
                     <li>
-                        <a href="Tarifa.jsp"><i class="zmdi zmdi-card zmdi zmdi-hc-fw"></i> Tarifa </a>
+                        <a href="Controller_Tarifas"><i class="zmdi zmdi-card zmdi zmdi-hc-fw"></i> Tarifa </a>
                     </li>
                     <li>
                         <a href="Controller_Reserva_De_Citas"><i class="zmdi zmdi-coffee zmdi zmdi-hc-fw"></i> Reservas De Citas </a>
@@ -72,6 +72,9 @@
                 <ul class="list-unstyled full-box">
                     <li>
                         <a href="Controller_Doctores"><i class="zmdi zmdi-account-circle zmdi zmdi-hc-fw"></i> Administradores - Doctores</a>
+                    </li>
+                     <li>
+                        <a href="Controller_Usuarios"><i class="zmdi zmdi-account-circle zmdi zmdi-hc-fw"></i> Usuarios </a>
                     </li>
                 </ul>
             </li>

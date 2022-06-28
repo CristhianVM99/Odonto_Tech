@@ -1,4 +1,8 @@
-
+<%@page import="java.util.List"%>
+<%@page import="com.odontotech.model.GenericClass"%>
+<%
+List<GenericClass> list=(List<GenericClass>) request.getAttribute("lis");
+%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -28,96 +32,93 @@
 			</ul>
 		</nav>
 		<!-- Content page -->
-		<div class="container-fluid">
-			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administración <small>EMPRESA</small></h1>
-			</div>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
-		</div>
+		 <div class="container-fluid">
+                <div class="page-header">
+                    <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Tarifas <small>ODONTO TECH</small></h1>
+                </div>
+                <p class="lead">Clinita odontologica ODONTO TECH,
+                    proporciona diferentes especialidades ,a los pacientes,
+                    como ser historial clinico, agentadar citas,
+                    promocionar e informar a los pacientes
+                    sobre la salud bucal e higinie.</p>
+            </div>
 
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
-			  		<a href="Tarifa.jsp" class="btn btn-info">
-			  			<i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE ESPECIALIDADES
+			  		<a href="Controller_Tarifas" class="btn btn-info">
+			  			<i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE TARIFAS
 			  		</a>
 			  	</li>
 			  	<li>
-			  		<a href="FrmTarifa.jsp" class="btn btn-success">
-			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVA ESPECIALIDAD
+			  		<a href="Controller_Tarifas?action=add" class="btn btn-success">
+			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; REGISTRO DE TARIFAS
 			  		</a>
 			  	</li>
 			</ul>
 		</div>
 
-		<!-- panel lista de empresas -->
+		<!-- panel lista de  -->
 		<div class="container-fluid">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE EMPRESAS</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE TARIFAS</h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-hover text-center">
 							<thead>
 								<tr>
-									<th class="text-center">#</th>
-									<th class="text-center">CÃ“DIGO DE REGISTRO</th>
-									<th class="text-center">NOMBRE</th>
-									<th class="text-center">EMAIL</th>
+									<th class="text-center">ID</th>
+									<th class="text-center">ID ESPECIALIDAD</th>
+									<th class="text-center">SERVICIO</th>
+									<th class="text-center">PRECIO</th>
+									<th class="text-center">IMAGEN</th>
+									<th class="text-center">NOMBRE ESPECIALIDAD</th>
 									<th class="text-center">ACTUALIZAR</th>
 									<th class="text-center">ELIMINAR</th>
 								</tr>
 							</thead>
 							<tbody>
+                                                            <%for(GenericClass cls:list){
+                                                                String e[]=cls.getToString();
+                                                            %>
 								<tr>
-									<td>1</td>
-									<td>1243567890</td>
-									<td>EL SALVADOR</td>
-									<td>bibliotecasv@gmail.com</td>
+									<td><%=e[2]%></td>
+									<td><%=e[4]%></td>
+									<td><%=e[6]%></td>
+									<td><%=e[8]%></td>
+									
+                                                                        <td><img src="<%=request.getContextPath()%>/ControllerWrite?table=tarifas&fid=<%=e[2]%>" 
+                                                                                 height="150" width="150"   ></td>
+                                                                        <td><%=e[10]%></td>
 									<td>
-										<a href="#!" class="btn btn-success btn-raised btn-xs">
+                                                                            <a href="Controller_Tarifas?action=edit&fid=<%=e[2]%>" class="btn btn-success btn-raised btn-xs">
 											<i class="zmdi zmdi-refresh"></i>
 										</a>
 									</td>
 									<td>
-										<form>
-											<button type="submit" class="btn btn-danger btn-raised btn-xs">
-												<i class="zmdi zmdi-delete"></i>
-											</button>
-										</form>
+						
+									<a href="Controller_Tarifas?action=eliminar&fid=<%=e[2]%>" class="btn btn-danger btn-raised btn-xs"
+                                                                           onclick="return (confirm('Esta seguro de eliminar?'))">
+									<i class="zmdi zmdi-delete"></i>
+									</a>
+									
 									</td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>9876543212</td>
-									<td>EE.UU</td>
-									<td>bibliotecaeeuu@gmail.com</td>
-									<td>
-										<a href="#!" class="btn btn-success btn-raised btn-xs">
-											<i class="zmdi zmdi-refresh"></i>
-										</a>
-									</td>
-									<td>
-										<form>
-											<button type="submit" class="btn btn-danger btn-raised btn-xs">
-												<i class="zmdi zmdi-delete"></i>
-											</button>
-										</form>
-									</td>
-								</tr>
+							<%}%>
 							</tbody>
 						</table>
 					</div>
 					<nav class="text-center">
 						<ul class="pagination pagination-sm">
-							<li class="disabled"><a href="javascript:void(0)">Â«</a></li>
+							<li class="disabled"><a href="javascript:void(0)">«</a></li>
 							<li class="active"><a href="javascript:void(0)">1</a></li>
 							<li><a href="javascript:void(0)">2</a></li>
 							<li><a href="javascript:void(0)">3</a></li>
 							<li><a href="javascript:void(0)">4</a></li>
 							<li><a href="javascript:void(0)">5</a></li>
-							<li><a href="javascript:void(0)">Â»</a></li>
+							<li><a href="javascript:void(0)">»</a></li>
 						</ul>
 					</nav>
 				</div>
