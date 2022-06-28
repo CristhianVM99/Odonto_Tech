@@ -40,10 +40,10 @@
                 </a>
                 <ul class="list-unstyled full-box">
                     <li>
-                        <a href="Especialidades.jsp"><i class="zmdi zmdi-case zmdi-hc-fw"></i> Especialidades </a>
+                        <a href="Controller_especialidades"><i class="zmdi zmdi-case zmdi-hc-fw"></i> Especialidades </a>
                     </li>
                     <li>
-                        <a href="Proveedores.jsp"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Almacen</a>
+                        <a href="Controller_Almacen"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Almacen</a>
                     </li>
                     <li>
                         <a href="Controller_Promociones"><i class="zmdi zmdi-label zmdi zzmdi-hc-fw"></i> Promociones </a>

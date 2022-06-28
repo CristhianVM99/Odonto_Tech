@@ -30,7 +30,7 @@
                 <!-- Content page -->
                 <div class="container-fluid">
                     <div class="page-header">
-                        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administracición <small>ESPECIALIDADES</small></h1>
+                        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> ADMINISTRACIÓN <small>Especialidades</small></h1>
                     </div>
                     <p class="lead">Ingrese los datos en los campos</p>
                 </div>
@@ -62,17 +62,12 @@
                                     <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos basicos</legend>
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <input type="hidden" name="valor" value="${valor}">
-                                        <div class="col-xs-12">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Ingrese su ID</label>
-                                                <input class="form-control" type="${visibilidad}" name="id" required="" maxlength="30" value="${especialidades.id}">
-                                            </div>
-                                        </div>
+                                            <input type="hidden" name="id" value="${esp.id}">
+                                        
                                         <div class="col-xs-12">
                                             <div class="form-group label-floating">
                                                 <label class="control-label">Ingrese su Nombre</label>
-                                                <input class="form-control" type="text" name="nombre" required="" maxlength="30" value="${especialidades.nombre_especialidad}">
+                                                <input class="form-control" type="text" name="nombre_especialidad" required="" maxlength="30" value="${esp.nombre_especialidad}">
                                             </div>
                                         </div>
                                     </div>

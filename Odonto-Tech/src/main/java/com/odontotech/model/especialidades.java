@@ -5,6 +5,8 @@ public class especialidades {
     private String nombre_especialidad;
 
     public especialidades() {
+        this.id=0;
+        this.nombre_especialidad="";
     }
 
     public especialidades(int id, String nombre_especialidad) {

@@ -1,10 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <%@page import="com.odontotech.model.GenericClass"%>
 <%@page import="java.util.List"%>
-<%
-    List <GenericClass> lista_Especialidad = (List<GenericClass>) request.getAttribute("lista_especialidad");
-%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,7 +31,7 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administración <small>EMPRESA</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administración <small>ODONTO TECH</small></h1>
 			</div>
 			<p class="lead">En esta intefaz se puede observar las especialidades</p>
 		</div>
@@ -43,12 +39,12 @@
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
-			  		<a href="Controller_especialidades?option=view" class="btn btn-info">
+			  		<a href="Controller_especialidades" class="btn btn-info">
 			  			<i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE ESPECIALIDADES
 			  		</a>
 			  	</li>
 			  	<li>
-			  		<a href="Controller_especialidades?option=add" class="btn btn-success">
+			  		<a href="Controller_especialidades?action=add" class="btn btn-success">
 			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVA ESPECIALIDAD
 			  		</a>
 			  	</li>
@@ -80,14 +76,14 @@
                                                                 <td>${especialidad.nombre_especialidad}</td>
                                                                 <td>                                                                    
                                                                     <form>
-                                                                        <a href="Controller_especialidades?option=edit&id=${especialidad.id}" class="btn btn-success btn-raised btn-xs">
+                                                                        <a href="Controller_especialidades?action=edit&id=${especialidad.id}" class="btn btn-success btn-raised btn-xs">
                                                                             <i class="zmdi zmdi-refresh"></i>
                                                                         </a>
                                                                     </form>
                                                                 </td>
                                                                 <td>
                                                                     <form>
-                                                                        <a href="Controller_especialidades?option=kill&id=${especialidad.id}" class="btn btn-danger btn-raised btn-xs">
+                                                                        <a href="Controller_especialidades?action=delete&id=${especialidad.id}" class="btn btn-danger btn-raised btn-xs">
                                                                             <i class="zmdi zmdi-delete"></i>>
                                                                             
                                                                         </a>
@@ -98,17 +94,7 @@
 							</tbody>
 						</table>
 					</div>
-					<nav class="text-center">
-						<ul class="pagination pagination-sm">
-							<li class="disabled"><a href="javascript:void(0)">Â«</a></li>
-							<li class="active"><a href="javascript:void(0)">1</a></li>
-							<li><a href="javascript:void(0)">2</a></li>
-							<li><a href="javascript:void(0)">3</a></li>
-							<li><a href="javascript:void(0)">4</a></li>
-							<li><a href="javascript:void(0)">5</a></li>
-							<li><a href="javascript:void(0)">Â»</a></li>
-						</ul>
-					</nav>
+					
 				</div>
 			</div>
 		</div>

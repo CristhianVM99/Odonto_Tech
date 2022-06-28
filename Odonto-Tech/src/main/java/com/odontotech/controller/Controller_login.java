@@ -39,13 +39,12 @@ public class Controller_login extends HttpServlet {
                 if (var[6].equals(Usuario) && var[8].equals(Password)) {
                     acceso = "permitido";
                     rol = var[14];
+                    System.out.println(var[6]+var[8]);
                 }
             }
             if (acceso.equals("permitido")) {
-                
-                request.setAttribute("rol", rol);
-                
-                request.getRequestDispatcher("Principal.jsp").forward(request, response);
+                          
+                response.sendRedirect("Controller_Principal?rol="+rol);
             }else{
                 request.getRequestDispatcher("Login.jsp").forward(request, response);
             }
