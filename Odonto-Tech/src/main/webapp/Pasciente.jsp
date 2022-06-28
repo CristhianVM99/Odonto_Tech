@@ -117,7 +117,7 @@
                                                                             <i class="zmdi zmdi-book"></i>
                                                                         </a>
                                                                     </form>
-                                                                </td
+                                                                </td>
                                                             </tr>
                                                         </c:forEach>
 							</tbody>

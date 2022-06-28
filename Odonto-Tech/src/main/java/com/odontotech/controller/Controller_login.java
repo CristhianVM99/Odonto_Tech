@@ -14,6 +14,7 @@ public class Controller_login extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // instrucciones de infirmacion
+        
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

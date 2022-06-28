@@ -43,7 +43,7 @@
                         <a href="Especialidades.jsp"><i class="zmdi zmdi-case zmdi-hc-fw"></i> Especialidades </a>
                     </li>
                     <li>
-                        <a href="Proveedores.jsp"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
+                        <a href="Proveedores.jsp"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Almacen</a>
                     </li>
                     <li>
                         <a href="Controller_Promociones"><i class="zmdi zmdi-label zmdi zzmdi-hc-fw"></i> Promociones </a>

@@ -3,6 +3,11 @@
 
 /******************************
 
+COLOR PALETTE
+
+
+
+
 [Table of Contents]
 
 1. Fonts
@@ -19,8 +24,7 @@
 7. Page Section
 8. Buttons
 9. News
-	9.1 Comments
-	9.2 Leave Comment
+	9.1 News Page Nav
 10. Sidebar
 11. Footer
 	11.1 Newsletter
@@ -40,6 +44,16 @@
 2. Body and some general stuff
 *********************************/
 
+:root 
+{
+	--color_principal: #00b2c3;
+	--color_paleta_1: #002030;
+	--color_paleta_2: #00445e;
+	--color_paleta_3: #007598;
+	--color_paleta_4: #00b2df;
+	--color_paleta_5: #00fdff;
+	--color_paleta_6: #ffffff;
+}
 *
 {
 	margin: 0;
@@ -115,13 +129,13 @@ p a:hover::after
 }
 ::selection
 {
-	background: #FFD266;
-	color: #C88E00;
+	background: var(--color_principal);
+	color: var(--color_paleta_3);
 }
 p::selection
 {
-	background: #FFD266;
-	color: #C88E00;
+	background: var(--color_principal);
+	color: var(--color_paleta_3);
 }
 h1{font-size: 36px;}
 h2{font-size: 22px;}
@@ -285,20 +299,26 @@ section
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+	transition: all 200ms ease;        
 }
+
 .header.scrolled
 {	
-	top: 15px;
+	top: 10px;
+	transition: 0.3s all ease-in-out;
 }
 .header.scrolled .header_content::before
 {
 	box-shadow: 0px 20px 49px rgba(0,0,0,0.17);
+        
 }
 .header_content
 {
 	width: calc(100% - 279px);
 	height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 }
 .header_content::before
 {
@@ -309,7 +329,7 @@ section
 	width: 100%;
 	height: 100%;
 	content: '';
-	box-shadow: 0px 20px 49px rgba(0,0,0,0.67);
+	box-shadow: 0px 10px 30px rgba(0,0,0,0.67);
 	z-index: -1;
 }
 
@@ -320,17 +340,23 @@ section
 .logo_container
 {
 	display: inline-block;
-	padding-left: 76px;
+
 }
 .logo span
 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 30px;
-	font-weight: 900;
-	color: #3a3a3a;
+	font-family: 'Poppins', sans-serif;
+	font-size: 22px; 
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 1px 4px 5px rgba(0,0,0,.1),
+				 1px 2px 7px rgba(0,0,0,.5);
 	vertical-align: middle;
 	text-transform: uppercase;
-	margin-left: 3px;
+}
+.logo img 
+{
+	width: 5.5vw;
+	filter: drop-shadow(1px 2px 5px #6B6B6B);
 }
 
 /*********************************
@@ -339,18 +365,57 @@ section
 
 .main_nav_container
 {
-	display: inline-block;
-	margin-left: auto;
-	padding-right: 93px;
+	width: 70%;	
+}
+.main_nav_list 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .main_nav
 {
-	margin-top: 7px;
+	margin-top: 8px;
 }
 .main_nav_item
+{        
+	position: relative;
+	--clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+        --transform: rotate(-90deg);
+}
+.main_nav_item:hover
 {
-	display: inline-block;
-	margin-right: 40px;
+	--clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        --transform: rotate(0);
+}
+.main_nav_nesting
+{
+	list-style: none;
+	transition: clip-path .3s;
+	clip-path: var(--clip);
+	position: absolute;
+        left: -30px;
+        bottom: 0;
+	width: max-content;
+	transform: translateY(100%);
+	background-color: #000;
+}
+.main_nav_nesting_inside
+{
+    background: var(--color_paleta_6);
+    padding: 5px 0;
+}
+.main_arrow
+{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: inline-block;
+    margin-left: 3px;
+}
+.main_link 
+{
+    padding: 0 30px;
 }
 .main_nav_item:last-child
 {
@@ -369,9 +434,10 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.main_nav_item a:hover
+.main_nav_item a:hover, 
+.main_nav_item a:hover img
 {
-	color: #ffb606;
+    color: var(--color_principal);
 }
 
 /*********************************
@@ -382,7 +448,7 @@ section
 {
 	width: 279px;
 	height: 100%;
-	background: #ffb606;
+	background: #00b2c3;
 }
 .header_side img
 {
@@ -396,7 +462,7 @@ section
 	font-size: 18px;
 	font-weight: 500;
 	color: #FFFFFF;
-	padding-left: 12px;
+
 }
 
 /*********************************
@@ -424,7 +490,7 @@ section
 }
 .hamburger_container:hover i
 {
-	color: #ffb606;
+	color: var(--color_principal);
 }
 
 /*********************************
@@ -502,7 +568,7 @@ section
 }
 .menu_item a:hover
 {
-	color: #ffb606;
+	color: var(--color_principal);
 }
 .menu_close_container
 {
@@ -549,7 +615,7 @@ section
 .menu_close_container:hover .menu_close,
 .menu_close_container:hover .menu_close::after
 {
-	background: #ffb606;
+	background: var(--color_principal);
 }
 
 /*********************************
@@ -575,11 +641,7 @@ section
 .menu_social_item
 {
 	display: inline-block;
-	margin-right: 27px;
-}
-.menu_social_item:last-child
-{
-	margin-right: 0px;
+	margin-right: 30px;
 }
 .menu_social_item a i
 {
@@ -587,7 +649,7 @@ section
 }
 .menu_social_item a i:hover
 {
-	color: #ffb606;
+	color: var(--color_principal);
 }
 .menu_container.active .menu_social_container
 {
@@ -887,7 +949,22 @@ section
 }
 
 /*********************************
-12.1 Newsletter
+11. Footer
+*********************************/
+
+.footer
+{
+	width: 100%;
+	padding-top: 86px;
+	background: #1a1a1a;
+}
+.footer .section_title h1
+{
+	color: #FFFFFF;
+}
+
+/*********************************
+11.1 Newsletter
 *********************************/
 
 .newsletter
@@ -918,7 +995,7 @@ section
 	width: 164px;
 	height: 42px;
 	border: none;
-	background: #ffb606;
+	background: var(--color_principal);
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 500;
@@ -928,9 +1005,8 @@ section
 {
 	border: solid 2px #FFFFFF;
 }
-
 /*********************************
-12.2 Footer Content
+11.2 Footer Content
 *********************************/
 
 .footer_content 
@@ -1007,7 +1083,7 @@ section
 }
 
 /*********************************
-12.3 Footer Copyright
+11.3 Footer Copyright
 *********************************/
 
 .footer_bar

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : FooterWeb
-    Created on : 25 jun. de 2022, 11:48:40
-    Author     : Cristian UPEA
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- Footer -->
@@ -10,33 +5,7 @@
 <footer class="footer">
     <div class="container">
 
-        <!-- Newsletter -->
-
-        <!-- <div class="newsletter">
-                <div class="row">
-                        <div class="col">
-                                <div class="section_title text-center">
-                                        <h1>Busca Informacion</h1>
-                                </div>
-                        </div>
-                </div>
-
-                <div class="row">
-                        <div class="col text-center">
-                                <div class="newsletter_form_container mx-auto">
-                                        <form action="post">
-                                                <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-                                                        <input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                                                        <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
-                                                </div>
-                                        </form>
-                                </div>
-                        </div>
-                </div>
-
-        </div> -->
-
-        <!-- Footer Content -->
+        <!-- FOOTER CONTENIDO -->
 
         <div class="footer_content">
             <div class="row">
@@ -52,21 +21,37 @@
                         </div>
                     </div>
 
-                    <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+                    <p class="footer_about_text">Esperemos sea de tu agrado la pagina web que creamos con mucho esfuerzo y que te sea util e informativo para ti.</p>
 
                 </div>
 
                 <!-- Footer Column - Menu -->
 
                 <div class="col-lg-3 footer_col">
-                    <div class="footer_column_title">Menu</div>
+                    <div class="footer_column_title">Odontologia</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="#">Odontologia</a></li>
-                            <li class="footer_list_item"><a href="#">Odontologia Cosmetica</a></li>
-                            <li class="footer_list_item"><a href="courses.html">Tarifa</a></li>
-                            <li class="footer_list_item"><a href="news.html">Promociones</a></li>
-                            <li class="footer_list_item"><a href="contact.html">Contacto</a></li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Dentista_De_Niños">Dentista de Niños</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Higiene_Dental">Higiene Dental</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Empastes_Dentales">Empaste Dental</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Puentes_Dentales">Puentes Dentales</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Coronas_Dentales">Coronas Dentales</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Extraccion_Dental">Extraccion Dental</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Dentadura_Postiza">Dentadura Postisa</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -74,14 +59,21 @@
                 <!-- Footer Column - Usefull Links -->
 
                 <div class="col-lg-3 footer_col">
-                    <div class="footer_column_title">Links</div>
+                    <div class="footer_column_title">Odontologia Cosmetica</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="#">Testimonials</a></li>
-                            <li class="footer_list_item"><a href="#">FAQ</a></li>
-                            <li class="footer_list_item"><a href="#">Community</a></li>
-                            <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-                            <li class="footer_list_item"><a href="#">Tuitions</a></li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Blanqueamiento_Dental">Blanqueamieto Dental</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Brakets">Brakets</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Carillas_Dentales">Carrillas Dentales</a>
+                            </li>
+                            <li class="footer_list_item">
+                                <a href="Controller_Pagina_Web?view=Adhesion_Dental">Adhesion Dental</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -94,20 +86,21 @@
                         <ul>
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
-                                    <img src="images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g">
+                                    <img src="images/placeholder.svg">
                                 </div>
-                                Ciudad de La Paz / Universidad Publica De El Alto.
+                                Universidad Publica De El Alto.
                             </li>
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
-                                    <img src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g">
+                                    <img src="images/smartphone.svg">
                                 </div>
-                                +501 78945612
+                                +501 75275967
                             </li>
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
-                                    <img src="images/envelope.svg" alt="https://www.flaticon.com/authors/lucy-g">
-                                </div>lospros@gmail.com
+                                    <img src="images/envelope.svg">
+                                </div>
+                                lospros@gmail.com
                             </li>
                         </ul>
                     </div>
@@ -116,13 +109,13 @@
             </div>
         </div>
 
-        <!-- Footer Copyright -->
+        <!-- FOOTER PIE DE PAGINA -->
 
         <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
             <div class="footer_copyright">
-                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los Derechos Reservados | Los Pros. <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+                <span>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los Derechos Reservados | CMC <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Cristhian | Marcos | Cecilio</a>
+                </span>    
             </div>
             <div class="footer_social ml-sm-auto">
                 <ul class="menu_social">

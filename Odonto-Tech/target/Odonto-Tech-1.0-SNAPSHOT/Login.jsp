@@ -1,5 +1,7 @@
+<%@page import="java.util.List"%>
+<%@page import="com.odontotech.model.GenericClass"%>
 <%
-
+    List<GenericClass>  Acceso = (List<GenericClass>)request.getAttribute("Acceso");
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
