@@ -1,13 +1,11 @@
 
 
+<%@page import="java.util.Base64"%>
 <%@page import="com.odontotech.dao.genericDAOimplements"%>
 <%@page import="com.odontotech.dao.genericDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.odontotech.model.GenericClass"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-    List<GenericClass> lista_doctores = (List<GenericClass>)request.getAttribute("lista_doctores");        
-%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -54,7 +52,7 @@
 			  	</li>
 			  	<li>
 			  		<a href="Controller_Doctores?action=add" class="btn btn-success">
-			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVO DOCTORES
+			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVO REGISTRO
 			  		</a>
 			  	</li>
 			</ul>
@@ -83,33 +81,35 @@
 								</tr>
 							</thead>
 							<tbody>
+                                                        <c:forEach var="doctor" items="${lista_doctores}">
                                                             <tr>
-                                                                <%
-                                                                    
-                                                                    for (GenericClass cl : lista_doctores) {
-                                                                            String[] val = cl.getToString();
-                                                                            for (int i = 2; i < val.length-1; i=i+2) 
-                                                                            {
-                                                                %> 
-                                                                <td><%= val[i]%></td>
-                                                                <%  
-                                                                            }          
-                                                                    }
-                                                                %>  
-                                                                <td>img</td>
+                                                                <td>${ doctor.id }</td>
+                                                                <td>${ doctor.nombre }</td>
+                                                                <td>${ doctor.ci }</td>
+                                                                <td>${ doctor.especialidad }</td>
+                                                                <td>${ doctor.celular }</td>
+                                                                <td>${ doctor.direccion }</td>
                                                                 <td>
-                                                                    <a href="Controller_Pacientes" class="btn btn-success btn-raised btn-xs">
-                                                                        <i class="zmdi zmdi-refresh"></i>
-                                                                    </a>
+                                                                    <c:if test="${doctor.imagen ne null}">
+                                                                        <img src="<%=request.getContextPath()%>/Controller_Doctores?action=mostrarFoto&id=${doctor.id}" style="width: 100px;"/>
+                                                                    </c:if>
+                                                                </td>
+                                                                <td>                                                                    
+                                                                    <form>
+                                                                        <a href="Controller_Doctores?action=edit&id=${doctor.id}" class="btn btn-success btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-edit"></i>
+                                                                        </a>
+                                                                    </form>
                                                                 </td>
                                                                 <td>
-                                                                    <form>
-                                                                        <button type="submit" class="btn btn-danger btn-raised btn-xs">
+                                                                    <form>                                                                        
+                                                                        <a href="Controller_Doctores?action=delete&id=${doctor.id}" class="btn btn-danger btn-raised btn-xs">
                                                                             <i class="zmdi zmdi-delete"></i>
-                                                                        </button>
+                                                                        </a>
                                                                     </form>
-                                                                </td> 
+                                                                </td>
                                                             </tr>
+                                                        </c:forEach>
 							</tbody>
 						</table>
 					</div>

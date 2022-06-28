@@ -5,7 +5,9 @@
 <%@page import="java.util.List"%>
 <%@page import="com.odontotech.model.GenericClass"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%
+    String id_registro = (String)request.getAttribute("id_registro");
+%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,13 +47,20 @@
 
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
+                                <li>    
+                                    <form>
+                                        <a href="Controller_Pacientes" class="btn btn-danger btn-raised btn-xs">
+                                            <i class="zmdi zmdi-arrow-left"></i> REGRESAR A PACIENTES
+                                        </a>
+                                    </form>
+                                </li>
 			  	<li>
-			  		<a href="Controller_Historial" class="btn btn-info">
+			  		<a href="Controller_Historial?action=view&id=${id_registro}" class="btn btn-info">
 			  			<i class="zmdi zmdi-plus"></i> &nbsp; HISTORIAL
 			  		</a>
 			  	</li>
 			  	<li>
-			  		<a href="Controller_Historial?action=add" class="btn btn-success">
+			  		<a href="Controller_Historial?action=add&id_registro=${id_registro}" class="btn btn-success">
 			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVO REGISTRO
 			  		</a>
 			  	</li>
@@ -62,7 +71,7 @@
 		<div class="container-fluid">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE HISTORIAL</h3>
+                                    <h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE HISTORIAL</h3>                                    
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
@@ -83,17 +92,17 @@
                                                                 <td>${registro.id}</td>
                                                                 <td>${registro.ci_paciente}</td>
                                                                 <td>${registro.fecha}</td>
-                                                                <td>${paciente.descripcion}</td>
+                                                                <td>${registro.descripcion}</td>
                                                                 <td>                                                                    
                                                                     <form>
-                                                                        <a href="Controller_Historial?action=edit&id=${registro.id}" class="btn btn-success btn-raised btn-xs">
+                                                                        <a href="Controller_Historial?action=edit&id=${registro.id}&id_registro=${id_registro}" class="btn btn-success btn-raised btn-xs">
                                                                             <i class="zmdi zmdi-refresh"></i>
                                                                         </a>
                                                                     </form>
                                                                 </td>
                                                                 <td>
                                                                     <form>                                                                        
-                                                                        <a href="Controller_Historial?action=delete&id=${registro.id}" class="btn btn-danger btn-raised btn-xs">
+                                                                        <a href="Controller_Historial?action=delete&id=${registro.id}&id_registro=${id_registro}" class="btn btn-danger btn-raised btn-xs">
                                                                             <i class="zmdi zmdi-delete"></i>
                                                                         </a>
                                                                     </form>

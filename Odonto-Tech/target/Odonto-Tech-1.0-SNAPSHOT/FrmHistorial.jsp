@@ -44,8 +44,8 @@
             <div class="container-fluid">
                 <ul class="breadcrumb breadcrumb-tabs">
                     <li>
-                        <a href="Controller_Historial" class="btn btn-info">
-                            <i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE REGISTROS
+                        <a href="Controller_Historial?action=view&id=${id_registro}" class="btn btn-info">
+                            <i class="zmdi zmdi-plus"></i> &nbsp; HISTORIAL
                         </a>
                     </li>
                 </ul>

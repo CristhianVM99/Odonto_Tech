@@ -3,7 +3,7 @@ package com.odontotech.model;
 public class Doctores {
     private int id;
     private String nombre;
-    private int ci;
+    private String ci;
     private String especialidad;
     private int celular;
     private String direccion;
@@ -29,11 +29,11 @@ public class Doctores {
         this.nombre = nombre;
     }
 
-    public int getCi() {
+    public String getCi() {
         return ci;
     }
 
-    public void setCi(int ci) {
+    public void setCi(String ci) {
         this.ci = ci;
     }
 
@@ -77,7 +77,7 @@ public class Doctores {
         this.id_especialidad = id_especialidad;
     }
 
-    public Doctores(int id, String nombre, int ci, String especialidad, int celular, String direccion, byte[] imagen, int id_especialidad) {
+    public Doctores(int id, String nombre, String ci, String especialidad, int celular, String direccion, byte[] imagen, int id_especialidad) {
         this.id = id;
         this.nombre = nombre;
         this.ci = ci;

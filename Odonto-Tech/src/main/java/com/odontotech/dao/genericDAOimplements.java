@@ -16,23 +16,37 @@ public class genericDAOimplements extends Conection implements genericDAO {
     @Override
     public void insert(String inser, byte[] image) throws Exception {
         this.conectar();
-        String[] armar = verific_insert(inser);
-        String sql = "INSERT INTO " + armar[0] + " " + armar[1] + " VALUES " + armar[2] + ",?)";
-      
-        PreparedStatement ps = this.conn.prepareStatement(sql);
-        ps.setBytes(1, image);
-        ps.executeUpdate();
+        String[] armar = verific_insert(inser,image);
+        if(image==null)
+        {
+           String sql = "INSERT INTO " + armar[0] + " " + armar[1] + " VALUES " + armar[2] + ")";
+            PreparedStatement ps = this.conn.prepareStatement(sql);
+            ps.executeUpdate();
+        }else{
+            String sql = "INSERT INTO " + armar[0] + " " + armar[1] + " VALUES " + armar[2] + ",?)";
+            PreparedStatement ps = this.conn.prepareStatement(sql);
+            ps.setBytes(1, image);
+            ps.executeUpdate();
+        }
         this.desconn();
     }
 
     @Override
     public void update(String up, byte[] image) throws Exception {
         this.conectar();
-        String consulta[] = verific_update(up);
-        String sql = "UPDATE " + consulta[0] + " SET " + consulta[1] + ",imagen=? " + consulta[2];
-        PreparedStatement ps = this.conn.prepareStatement(sql);
-        ps.setBytes(1, image);
-        ps.executeUpdate();
+        String[] consulta = verific_update(up);
+        if(image==null)
+        {    
+            String sql = "UPDATE " + consulta[0] + " SET " + consulta[1] + consulta[2];
+            System.out.println(sql);
+            PreparedStatement ps = this.conn.prepareStatement(sql);
+            ps.executeUpdate();
+        }else{
+            String sql = "UPDATE " + consulta[0] + " SET " + consulta[1] + ",imagen=? " + consulta[2];
+            PreparedStatement ps = this.conn.prepareStatement(sql);
+            ps.setBytes(1, image);
+            ps.executeUpdate();
+        }
         this.desconn();
     }
 
@@ -194,7 +208,7 @@ public class genericDAOimplements extends Conection implements genericDAO {
     }
 
 //mis metodos no abstractos
-    private String[] verific_insert(String val) {
+    private String[] verific_insert(String val,byte[] img) {
         val = val.replace("{", ";");
         val = val.replace("=", ";");
         val = val.replace(",", ";");
@@ -234,11 +248,21 @@ public class genericDAOimplements extends Conection implements genericDAO {
 
             }
         }
+        
+        if(img==null)
+        {
+          consulta[1] = consulta[1].substring(0, consulta[1].length() - 1);
+          consulta[1] =consulta[1]+")";
+        }else
+        {
         consulta[1] = consulta[1] + "imagen)";
+        }
+
         //para eliminar el el ultimo caracter
         consulta[2] = consulta[2].substring(0, consulta[2].length() - 1);
         return consulta;
     }
+    
 
     private String[] verific_update(String val) {
         val = val.replace("{", ";");
@@ -265,11 +289,10 @@ public class genericDAOimplements extends Conection implements genericDAO {
         //para eliminar el ultimo caracter de el String
         consulta[1] = consulta[1].substring(0, consulta[1].length() - 1);
         consulta[2] = "WHERE " + split[1] + "='" + split[2] + "'";
-
         return consulta;
 
     }
-
+    
     private String[] verific_select_generic(String table) {
         try {
           this.conectar();
