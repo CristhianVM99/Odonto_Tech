@@ -1,5 +1,10 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
+<%@page import="com.odontotech.model.GenericClass"%>
+<%@page import="java.util.List"%>
+<%
+    List <GenericClass> Lista_Especialidad = (List<GenericClass>) request.getAttribute("Lista_especialidad");
+%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,18 +37,18 @@
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administraci�n <small>EMPRESA</small></h1>
 			</div>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+			<p class="lead">En esta intefaz se puede observar las especialidades</p>
 		</div>
 
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
-			  		<a href="Especialidades.jsp" class="btn btn-info">
+			  		<a href="Controller_especialidades" class="btn btn-info">
 			  			<i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE ESPECIALIDADES
 			  		</a>
 			  	</li>
 			  	<li>
-			  		<a href="FrmEspecialidades.jsp" class="btn btn-success">
+			  		<a href="Controller_especialidades?option=add" class="btn btn-success">
 			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVA ESPECIALIDAD
 			  		</a>
 			  	</li>
@@ -61,16 +66,73 @@
 						<table class="table table-hover text-center">
 							<thead>
 								<tr>
-									<th class="text-center">#</th>
-									<th class="text-center">CÓDIGO DE REGISTRO</th>
-									<th class="text-center">NOMBRE</th>
-									<th class="text-center">EMAIL</th>
-									<th class="text-center">ACTUALIZAR</th>
+									<th class="text-center">ID</th>
+									<th class="text-center">NOMBRE ESPECIALIDAD</th>
+									<th class="text-center">EDITAR</th>
 									<th class="text-center">ELIMINAR</th>
+									
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+                                                        <c:forEach var="especialidad" items="${Lista_especialidad}">
+                                                            <tr>
+                                                                <td>${especialidad.id}</td>
+                                                                <td>${especialidad.nombre_especialidad}</td>
+                                                                <td>                                                                    
+                                                                    <form>
+                                                                        <a href="Controller_especialidades?option=edit&id=${especialidad.id}" class="btn btn-success btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-refresh"></i>
+                                                                        </a>
+                                                                    </form>
+                                                                </td>
+                                                                <td>
+                                                                    <form>
+                                                                        <a href="Controller_especialidades?option=kill&id=${especialidad.id}" class="btn btn-danger btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-delete"></i>>
+                                                                            
+                                                                        </a>
+                                                                    </form>
+                                                                </td>
+                                                            </tr>
+                                                </c:forEach>
+							</tbody>
+						</table>
+					</div>
+					<nav class="text-center">
+						<ul class="pagination pagination-sm">
+							<li class="disabled"><a href="javascript:void(0)">«</a></li>
+							<li class="active"><a href="javascript:void(0)">1</a></li>
+							<li><a href="javascript:void(0)">2</a></li>
+							<li><a href="javascript:void(0)">3</a></li>
+							<li><a href="javascript:void(0)">4</a></li>
+							<li><a href="javascript:void(0)">5</a></li>
+							<li><a href="javascript:void(0)">»</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+	<!--====== Scripts -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/sweetalert2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$.material.init();
+	</script>
+</body>
+</html>
+
+<%
+
+/*
+    <tr>
 									<td>1</td>
 									<td>1243567890</td>
 									<td>EL SALVADOR</td>
@@ -106,36 +168,6 @@
 										</form>
 									</td>
 								</tr>
-							</tbody>
-						</table>
-					</div>
-					<nav class="text-center">
-						<ul class="pagination pagination-sm">
-							<li class="disabled"><a href="javascript:void(0)">«</a></li>
-							<li class="active"><a href="javascript:void(0)">1</a></li>
-							<li><a href="javascript:void(0)">2</a></li>
-							<li><a href="javascript:void(0)">3</a></li>
-							<li><a href="javascript:void(0)">4</a></li>
-							<li><a href="javascript:void(0)">5</a></li>
-							<li><a href="javascript:void(0)">»</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-		
-	</section>
+    */
 
-	<!--====== Scripts -->
-	<script src="./js/jquery-3.1.1.min.js"></script>
-	<script src="./js/sweetalert2.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/material.min.js"></script>
-	<script src="./js/ripples.min.js"></script>
-	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="./js/main.js"></script>
-	<script>
-		$.material.init();
-	</script>
-</body>
-</html>
+%>
