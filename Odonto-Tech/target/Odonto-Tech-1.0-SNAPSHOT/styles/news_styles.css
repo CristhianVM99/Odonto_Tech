@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* CSS Document */
 
 /******************************
@@ -21,15 +22,22 @@ COLOR PALETTE
 	4.1 Menu Social
 	4.2 Menu copyright
 5. Home
+	5.1 Hero Slider
+	5.2 Hero Slider Navigation
+6. Hero Boxes
 7. Page Section
 8. Buttons
-9. News
-	9.1 News Page Nav
-10. Sidebar
-11. Footer
-	11.1 Newsletter
-	11.2 Footer Content
-	11.3 Footer Copyright
+9. Popular
+10. Register
+11. Search
+	11.1 Search Form
+12. Services
+13. Testimonials
+14. Events
+15. Footer
+	15.1 Newsletter
+	15.2 Footer Content
+	15.3 Footer Copyright
 
 
 ******************************/
@@ -43,7 +51,6 @@ COLOR PALETTE
 /*********************************
 2. Body and some general stuff
 *********************************/
-
 :root 
 {
 	--color_principal: #00b2c3;
@@ -69,6 +76,7 @@ body
 	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
+        scroll-behavior: smooth;
 }
 div
 {
@@ -299,7 +307,7 @@ section
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
-	transition: all 200ms ease;        
+	transition: all 200ms ease; 
 }
 
 .header.scrolled
@@ -340,7 +348,7 @@ section
 .logo_container
 {
 	display: inline-block;
-
+        margin-left: 10px;
 }
 .logo span
 {
@@ -415,7 +423,7 @@ section
 }
 .main_link 
 {
-    padding: 0 30px;
+    padding: 0 20px;
 }
 .main_nav_item:last-child
 {
@@ -454,6 +462,7 @@ section
 {
 	width: 29px;
 	height: 29px;
+        padding-right:5px;
 }
 .header_side span
 {
@@ -464,7 +473,13 @@ section
 	color: #FFFFFF;
 
 }
-
+.header_side:nth-child(3){
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 134px;
+    font-size: 40px;
+}
 /*********************************
 3.4 Hamburger
 *********************************/
@@ -690,7 +705,6 @@ section
 	transform: translateY(0px);
 	opacity: 1;
 }
-
 /*********************************
 5. Home
 *********************************/

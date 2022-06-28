@@ -1,18 +1,37 @@
 package com.odontotech.model;
 
+import javax.persistence.Lob;
+
 public class Doctores {
     private int id;
     private String nombre;
     private String ci;
-    private String especialidad;
     private int celular;
     private String direccion;
+    @Lob
     private byte[] imagen;
     private int id_especialidad;
 
     public Doctores() {
+        this.id = 0;
+        this.nombre = "";
+        this.ci = "";
+        this.celular = 0;
+        this.direccion = "";
+        this.imagen = null;
+        this.id_especialidad = 0;
     }
 
+    public Doctores(int id, String nombre, String ci, int celular, String direccion, byte[] imagen, int id_especialidad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.ci = ci;
+        this.celular = celular;
+        this.direccion = direccion;
+        this.imagen = imagen;
+        this.id_especialidad = id_especialidad;
+    }
+    
     public int getId() {
         return id;
     }
@@ -35,14 +54,6 @@ public class Doctores {
 
     public void setCi(String ci) {
         this.ci = ci;
-    }
-
-    public String getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(String especialidad) {
-        this.especialidad = especialidad;
     }
 
     public int getCelular() {
@@ -77,20 +88,11 @@ public class Doctores {
         this.id_especialidad = id_especialidad;
     }
 
-    public Doctores(int id, String nombre, String ci, String especialidad, int celular, String direccion, byte[] imagen, int id_especialidad) {
-        this.id = id;
-        this.nombre = nombre;
-        this.ci = ci;
-        this.especialidad = especialidad;
-        this.celular = celular;
-        this.direccion = direccion;
-        this.imagen = imagen;
-        this.id_especialidad = id_especialidad;
-    }
-
     @Override
     public String toString() {
-        return "doctores{" + "id=" + id + ", nombre=" + nombre + ", ci=" + ci + ", especialidad=" + especialidad + ", celular=" + celular + ", direccion=" + direccion + ", id_especialidad=" + id_especialidad + '}';
+        return "Doctores{" + "id=" + id + ", nombre=" + nombre + ", ci=" + ci + ", celular=" + celular + ", direccion=" + direccion + ", id_especialidad=" + id_especialidad + '}';
     }
+
+    
     
 }

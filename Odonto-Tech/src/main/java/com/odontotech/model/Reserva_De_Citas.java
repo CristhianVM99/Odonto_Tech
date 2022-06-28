@@ -11,13 +11,20 @@ public class Reserva_De_Citas {
     private String hora;
     private int celular;
     private int id_especialidad;
-    private String nombre_especialidad;
     private String servicios;
 
     public Reserva_De_Citas() {
+        this.id = 0;
+        this.nombre_paciente = "";
+        this.descripcion_consulta = "";
+        this.fecha = null;
+        this.hora = "";
+        this.celular = 0;
+        this.id_especialidad = 0;
+        this.servicios = "";
     }
 
-    public Reserva_De_Citas(int id, String nombre_paciente, String descripcion_consulta, Date fecha, String hora, int celular, int id_especialidad, String nombre_especialidad, String servicios) {
+    public Reserva_De_Citas(int id, String nombre_paciente, String descripcion_consulta, Date fecha, String hora, int celular, int id_especialidad, String servicios) {
         this.id = id;
         this.nombre_paciente = nombre_paciente;
         this.descripcion_consulta = descripcion_consulta;
@@ -25,7 +32,6 @@ public class Reserva_De_Citas {
         this.hora = hora;
         this.celular = celular;
         this.id_especialidad = id_especialidad;
-        this.nombre_especialidad = nombre_especialidad;
         this.servicios = servicios;
     }
 
@@ -85,14 +91,6 @@ public class Reserva_De_Citas {
         this.id_especialidad = id_especialidad;
     }
 
-    public String getNombre_especialidad() {
-        return nombre_especialidad;
-    }
-
-    public void setNombre_especialidad(String nombre_especialidad) {
-        this.nombre_especialidad = nombre_especialidad;
-    }
-
     public String getServicios() {
         return servicios;
     }
@@ -103,7 +101,7 @@ public class Reserva_De_Citas {
 
     @Override
     public String toString() {
-        return "Reserva_De_Citas{" + "id=" + id + ", nombre_paciente=" + nombre_paciente + ", descripcion_consulta=" + descripcion_consulta + ", fecha=" + fecha + ", hora=" + hora + ", celular=" + celular + ", id_especialidad=" + id_especialidad + ", nombre_especialidad=" + nombre_especialidad + ", servicios=" + servicios + '}';
+        return "Reserva_De_Citas{" + "id=" + id + ", nombre_paciente=" + nombre_paciente + ", descripcion_consulta=" + descripcion_consulta + ", fecha=" + fecha + ", hora=" + hora + ", celular=" + celular + ", id_especialidad=" + id_especialidad + ", servicios=" + servicios + '}';
     }
     
     

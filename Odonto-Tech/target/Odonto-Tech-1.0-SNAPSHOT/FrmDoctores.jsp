@@ -1,4 +1,5 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="com.odontotech.model.Doctores"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,12 +40,7 @@
                 <ul class="breadcrumb breadcrumb-tabs">
                     <li>
                         <a href="Controller_Doctores" class="btn btn-info">
-                            <i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE ESPECIALIDADES
-                        </a>
-                    </li>
-                    <li>
-                        <a href="FrmDoctores.jsp" class="btn btn-success">
-                            <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVA ESPECIALIDAD
+                            <i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE DOCTORES
                         </a>
                     </li>
                 </ul>
@@ -54,68 +50,60 @@
             <div class="container-fluid">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; DATOS DE LA EMPRESA</h3>
+                        <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; DATOS DEL DOCTOR</h3>
                     </div>
                     <div class="panel-body">
-                        <form>
-                            <fieldset>
-                                <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos bÃ¡sicos</legend>
+                        <form action="Controller_Doctores" method="POST" enctype="multipart/form-data">
+                            <fieldset> 
+                                <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos basicos</legend>
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-12 col-sm-6">
+                                        <input type="text" name="id" value="${doctor.id}">
+                                        <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">DNI/CÃDIGO/NÃMERO DE REGISTRO *</label>
-                                                <input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-reg" required="" maxlength="30">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Nombre de la empresa *</label>
-                                                <input pattern="[a-zA-Z0-9Ã¡Ã©Ã­Ã³ÃºÃÃÃÃÃÃ±Ã ]{1,40}" class="form-control" type="text" name="nombre-reg" required="" maxlength="40">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">TelÃ©fono</label>
-                                                <input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" maxlength="15">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">E-mail</label>
-                                                <input class="form-control" type="email" name="email-reg" maxlength="50">
+                                                <label class="control-label">NOMBRE</label>
+                                                <input class="form-control" type="text" name="nombre" required="" maxlength="30" value="${doctor.nombre}">
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">DirecciÃ³n</label>
-                                                <input class="form-control" type="text" name="direccion-reg" maxlength="170">
+                                                <label class="control-label">CI</label>
+                                                <input class="form-control" type="text" name="ci" required="" maxlength="40" value="${doctor.ci}">
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <br>
-                            <fieldset>
-                                <legend><i class="zmdi zmdi-assignment-o"></i> &nbsp; Otros datos</legend>
-                                <div class="container-fluid">
-                                    <div class="row">
+                                        <div class="col-xs-12 ">
+                                            <div class="form-group label-floating">
+                                                <label>Especialidad</label>
+                                                <select class="form-select" name="id_especialidad">
+                                                    <c:forEach var="esp" items="${lista_especialidades}">
+                                                        <option value="${esp.id}"
+                                                                <c:if test="${doctor.id_especialidad==esp.id}">
+                                                            selected
+                                                            </c:if>
+                                                            >${esp.nombre_especialidad}</option>
+                                                    </c:forEach>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">Nombre del gerente o director *</label>
-                                                <input pattern="[a-zA-Z0-9Ã¡Ã©Ã­Ã³ÃºÃÃÃÃÃÃ±Ã]{1,50}" class="form-control" type="text" name="director-reg" required="" maxlength="50">
+                                                <label class="control-label">Celular</label>
+                                                <input class="form-control" type="text" name="celular" value="${doctor.celular}" maxlength="50">
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-6">
+                                        <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">SÃ­mbolo de moneda *</label>
-                                                <input class="form-control" type="text" name="moneda-reg" required="" maxlength="1">
+                                                <label class="control-label">Direccion</label>
+                                                <input class="form-control" type="text" name="direccion" value="${doctor.direccion}" maxlength="50">
                                             </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
+                                        </div>    
+                                        <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">AÃ±o *</label>
-                                                <input pattern="[0-9]{4,4}" class="form-control" type="text" name="year-reg" required="" maxlength="4">
+                                                <label>Imagen</label>
+                                                <p>seleccione una Imagen.<br><input type="file" name="imagen" value="${doctor.imagen}" required=""></p>
+                                                    <c:if test="${doctor.imagen ne null}">
+                                                        <img src="<%=request.getContextPath()%>/Controller_Doctores?action=mostrarFoto&id=${doctor.id}&tabla=doctores" style="width: 100px;"/>
+                                                    </c:if>
                                             </div>
                                         </div>
                                     </div>

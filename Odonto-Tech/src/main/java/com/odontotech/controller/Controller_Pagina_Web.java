@@ -1,8 +1,19 @@
 
 package com.odontotech.controller;
 
+import com.odontotech.dao.genericDAO;
+import com.odontotech.dao.genericDAOimplements;
+import com.odontotech.model.Doctores;
+import com.odontotech.model.GenericClass;
+import com.odontotech.model.Reserva_De_Citas;
+import com.odontotech.model.especialidades;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -59,6 +70,20 @@ public class Controller_Pagina_Web extends HttpServlet {
                     request.getRequestDispatcher("View_Promociones.jsp").forward(request, response);
                     break;
                 case "Reservar_Cita":
+                    //obetenemos la lista de especialidades que tiene el consultorio.
+                    genericDAO dao = new genericDAOimplements();
+                    List<GenericClass> lista_especialidades = dao.select("especialidades");
+                    
+                    List<especialidades> lista_view= new ArrayList<>();
+                    for(GenericClass cl : lista_especialidades) {
+                        String[] val = cl.getToString();
+                        especialidades d = new especialidades();
+                            d.setId(Integer.parseInt(val[2]));
+                            d.setNombre_especialidad(val[4]);
+                            lista_view.add(d);
+                    }
+                    
+                    request.setAttribute("lista_especialidades", lista_view);
                     request.getRequestDispatcher("View_Reservar_Cita.jsp").forward(request, response);
                     break;                    
                 case "Login":
@@ -77,5 +102,51 @@ public class Controller_Pagina_Web extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        Reserva_De_Citas R = new Reserva_De_Citas();
+        genericDAO dao = new genericDAOimplements();
+        int id = Integer.parseInt(request.getParameter("id"));
+        String nombre_paciente = request.getParameter("nombre_paciente");
+        String descripcion_consulta = request.getParameter("descripcion_consulta");
+        Date fecha = convierteFecha(request.getParameter("fecha"));
+        String hora = request.getParameter("hora");
+        int celular = Integer.parseInt(request.getParameter("celular"));
+        int id_especialidad = Integer.parseInt(request.getParameter("id_especialidad"));
+        String servicio = request.getParameter("servicios");
+        
+        R.setId(id);
+        R.setNombre_paciente(nombre_paciente);
+        R.setDescripcion_consulta(descripcion_consulta);
+        R.setFecha(fecha);
+        R.setHora(hora);
+        R.setCelular(celular);
+        R.setId_especialidad(id_especialidad);
+        R.setServicios(servicio);
+        
+        try {
+                
+                //nuevo registro
+                dao.insert(R.toString() , null);
+                
+        } catch (Exception ex){
+                System.out.println("Error al insertar "+ex.getMessage());
+        }
+        
+        response.sendRedirect("Controller_Pagina_Web?view=Reservar_Cita");
+    }
+    
+        public Date convierteFecha(String fecha)
+    {
+        Date fechaBD = null;
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-mm-dd");
+        
+        java.util.Date fechaTMP;
+      
+        try {
+            fechaTMP = formato.parse(fecha);
+            fechaBD = new Date(fechaTMP.getTime());    
+        } catch (ParseException ex) {
+            System.out.println("Error al convertir la fecha "+ex.getMessage());
+        }        
+        return fechaBD;
     }
 }

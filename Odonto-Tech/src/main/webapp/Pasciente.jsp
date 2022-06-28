@@ -94,7 +94,7 @@
                                                                 <td>${paciente.direccion}</td>
                                                                 <td>
                                                                     <c:if test="${paciente.imagen ne null}">
-                                                                        <img src="<%=request.getContextPath()%>/Controller_Pacientes?action=mostrarFoto&id=${paciente.ci}" style="width: 100px;"/>
+                                                                        <img src="<%=request.getContextPath()%>/Controller_Pacientes?action=mostrarFoto&id=${paciente.ci}&tabla=pacientes" style="width: 100px;"/>
                                                                     </c:if>
                                                                 </td>
                                                                 <td>                                                                    

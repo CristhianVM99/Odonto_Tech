@@ -86,12 +86,16 @@
                                                                 <td>${ doctor.id }</td>
                                                                 <td>${ doctor.nombre }</td>
                                                                 <td>${ doctor.ci }</td>
-                                                                <td>${ doctor.especialidad }</td>
+                                                                <c:forEach var="esp" items="${lista_especialidades}">
+                                                                    <c:if test="${doctor.id_especialidad==esp.id}">
+                                                                        <td>${esp.nombre_especialidad}</td>                                                                        
+                                                                    </c:if>
+                                                                </c:forEach>
                                                                 <td>${ doctor.celular }</td>
                                                                 <td>${ doctor.direccion }</td>
                                                                 <td>
                                                                     <c:if test="${doctor.imagen ne null}">
-                                                                        <img src="<%=request.getContextPath()%>/Controller_Doctores?action=mostrarFoto&id=${doctor.id}" style="width: 100px;"/>
+                                                                        <img src="<%=request.getContextPath()%>/Controller_Doctores?action=mostrarFoto&id=${ doctor.id }&tabla=doctores" style="width: 100px;"/>
                                                                     </c:if>
                                                                 </td>
                                                                 <td>                                                                    
