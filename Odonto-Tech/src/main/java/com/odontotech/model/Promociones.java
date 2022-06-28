@@ -8,7 +8,7 @@ public class Promociones {
  private int id;
  private String servicio;
  private double precio;
- private ImageIcon imagen;
+ private byte[] imagen;
  private int id_especialidad;
  private String nombre_especialidad;
 
@@ -21,7 +21,7 @@ public class Promociones {
         this.nombre_especialidad = "";
     }
 
-    public Promociones(int id, String servicio, double precio, ImageIcon imagen, int id_especialidad, String nombre_especialidad) {
+    public Promociones(int id, String servicio, double precio, byte[] imagen, int id_especialidad, String nombre_especialidad) {
         this.id = id;
         this.servicio = servicio;
         this.precio = precio;
@@ -54,11 +54,11 @@ public class Promociones {
         this.precio = precio;
     }
 
-    public ImageIcon getImagen() {
+    public byte[] getImagen() {
         return imagen;
     }
 
-    public void setImagen(ImageIcon imagen) {
+    public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
 

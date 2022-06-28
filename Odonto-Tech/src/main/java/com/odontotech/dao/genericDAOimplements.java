@@ -86,9 +86,11 @@ public class genericDAOimplements extends Conection implements genericDAO {
         for (int i = 1; i < campos.length; i++) {
             if (i % 2 != 0 && campos[i].equals("id")) {
                 indice = i;
+                break;
             }
             if (i % 2 != 0 && campos[i].equals("ci")) {
                 indice = i;
+                break;
             }
         }
         //unimos los campos +tabla +  where 

@@ -52,10 +52,21 @@ public class Controller_Pagina_Web extends HttpServlet {
                 case "Adhesion_Dental":
                     request.getRequestDispatcher("View_AdhesionDental.jsp").forward(request, response);
                     break;
+                case "Tarifas":
+                    request.getRequestDispatcher("View_Tarifas.jsp").forward(request, response);
+                    break;
+                case "Promociones":
+                    request.getRequestDispatcher("View_Promociones.jsp").forward(request, response);
+                    break;
+                case "Reservar_Cita":
+                    request.getRequestDispatcher("View_Reservar_Cita.jsp").forward(request, response);
+                    break;                    
+                case "Login":
+                    request.getRequestDispatcher("Login.jsp").forward(request, response);
+                    break;
                 case "view":
                     request.getRequestDispatcher("index.jsp").forward(request, response);
                     break;
-                    
             }
         } catch (Exception e) {
             System.out.println("Error Get" + e.getMessage());

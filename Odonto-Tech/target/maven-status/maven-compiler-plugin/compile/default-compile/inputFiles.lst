@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pagina_Web.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Usuarios.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Reserva_De_Citas.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Usuarios.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Promociones.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Doctores.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Promociones.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Servlet_prueba.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\almacen.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\utiles\DateFormat.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Noticias.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\utiles\Conection.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Historial.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Historial.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\ControllerWrite.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\especialidades.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAOimplements.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\GenericClass.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Pacientes.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pacientes.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_login.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAO.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Noticias.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Principal.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Sonrisa_del_mes.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Tarifas.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Reserva_De_Citas.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\utiles\Recovery.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Tarifas.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Sonrisa_Del_Mes.java
+D:\escritorio\TECNOLOGIAS EMERGENTES II\proyecto\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Doctores.java
+=======
+<<<<<<< HEAD
+>>>>>>> d48ea5445e7e276cb3b3e4ca9acb375e26e1ea3e
 D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pacientes.java
 D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_especialidades.java
 D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Pacientes.java
@@ -18,3 +55,28 @@ D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controll
 D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\especialidades.java
 D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Promociones.java
 D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\utiles\Conection.java
+<<<<<<< HEAD
+=======
+=======
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Pacientes.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Promociones.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Historial.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Doctores.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pacientes.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\utiles\Conection.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Historial.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAO.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Reserva_De_Citas.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Reserva_De_Citas.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Doctores.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_login.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Principal.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Servlet_prueba.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pagina_Web.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\GenericClass.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAOimplements.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\almacen.java
+C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\especialidades.java
+>>>>>>> 8973d4fd5e2971bb66eae4da4eb3beb56e0fe67a
+>>>>>>> 63385070c424454bcc6d467ad6cd462a8149b6f0
+>>>>>>> d48ea5445e7e276cb3b3e4ca9acb375e26e1ea3e

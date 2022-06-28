@@ -1,4 +1,8 @@
+<%
+    String val = (String) request.getAttribute("valor");
 
+%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,110 +16,112 @@
         <!-- Menu -->
         <jsp:include page="META-INF/Menu.jsp"></jsp:include>
 
-        <!-- Content page-->
-        <section class="full-box dashboard-contentPage">
-            <!-- NavBar -->
-            <nav class="full-box dashboard-Navbar">
-                <ul class="full-box list-unstyled text-right">
-                    <li class="pull-left">
-                        <a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
-                    </li>
-                    <li>
-                        <a href="search.html" class="btn-search">
-                            <i class="zmdi zmdi-search"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Content page -->
-            <div class="container-fluid">
-                <div class="page-header">
-                    <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> AdministraciÃ³n <small>EMPRESA</small></h1>
+            <!-- Content page-->
+            <section class="full-box dashboard-contentPage">
+                <!-- NavBar -->
+                <nav class="full-box dashboard-Navbar">
+                    <ul class="full-box list-unstyled text-right">
+                        <li class="pull-left">
+                            <a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+                        </li>
+                        <li>
+                            <a href="search.html" class="btn-search">
+                                <i class="zmdi zmdi-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Content page -->
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Sonrisa del mes <small>ODONTO TECH</small></h1>
+                    </div>
+                    <p class="lead">Clinita odontologica ODONTO TECH,
+                        proporciona diferentes especialidades ,a los pacientes,
+                        como ser historial clinico, agentadar citas,
+                        promocionar e informar a los pacientes
+                        sobre la salud bucal e higinie.</p>
                 </div>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
-            </div>
+                <div class="container-fluid">
+                    <ul class="breadcrumb breadcrumb-tabs">
+                        <li>
+                            <a href="Controller_Sonrisa_Del_Mes" class="btn btn-info">
+                                <i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE SONRISAS DEL MES
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Controller_Sonrisa_Del_Mes?action=add" class="btn btn-success">
+                                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; REGISTRO DE SONRISAS DEL MES
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="container-fluid">
-                <ul class="breadcrumb breadcrumb-tabs">
-                    <li>
-                        <a href="SonrisaDelMes.jsp" class="btn btn-info">
-                            <i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE ESPECIALIDADES
-                        </a>
-                    </li>
-                    <li>
-                        <a href="FrmSonrisaDelMes.jsp" class="btn btn-success">
-                            <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; NUEVA ESPECIALIDAD
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <!-- panel datos de la empresa -->
+                <div class="container-fluid">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; 
+                            <%=(val.equals("nuevo")) ? "NUEVA" : ""%>
 
-            <!-- panel datos de la empresa -->
-            <div class="container-fluid">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; DATOS DE LA EMPRESA</h3>
+                            <%=(val.equals("modificar")) ? "MODIFICAR LA" : ""%>
+
+                            SONRISA DEL MES
+                        </h3>
                     </div>
                     <div class="panel-body">
-                        <form>
+                        <form action="Controller_Sonrisa_Del_Mes" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="fid" value="${sonrisa.id}">
+                 
+
                             <fieldset>
-                                <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos bÃ¡sicos</legend>
+                                <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos</legend>
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">DNI/CÃDIGO/NÃMERO DE REGISTRO *</label>
-                                                <input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-reg" required="" maxlength="30">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Nombre paciente *</label>
+                                                <select name="fci-paciente" class="form-control" requiered>
+                                                    <option value="">--Seleccione--</option>
+                                                    <c:forEach var="pac" items="${paciente}">
+                                                        <option value="${pac.ci}"<c:if test="${pac.ci==sonrisa.ci_paciente}" var="sel">selected</c:if> >
+                                                        ${pac.nombre}</option> 
+                                                    </c:forEach>
+                                                 </select>                 
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Nombre de la empresa *</label>
-                                                <input pattern="[a-zA-Z0-9Ã¡Ã©Ã­Ã³ÃºÃÃÃÃÃÃ±Ã ]{1,40}" class="form-control" type="text" name="nombre-reg" required="" maxlength="40">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">TelÃ©fono</label>
-                                                <input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" maxlength="15">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">E-mail</label>
-                                                <input class="form-control" type="email" name="email-reg" maxlength="50">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Nombre doctor *</label>
+                                                <select name="fid-doctor" class="form-control" required>
+                                                    <option value=""  >--Seleccione--</option>
+                                                    <c:forEach var="valor_doctor" items="${li_doc}">
+                                                        <option value="${valor_doctor.id}"
+                                                                <c:if test="${sonrisa.id_doctor==valor_doctor.id}" var="ss">
+                                                                    selected  
+                                                                </c:if> 
+                                                                >
+                                                        ${valor_doctor.nombre}</option>
+                                                     </c:forEach>   
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">DirecciÃ³n</label>
-                                                <input class="form-control" type="text" name="direccion-reg" maxlength="170">
+                                                <label class="control-label">Descripcion *</label>
+                                                <input  class="form-control" type="text" name="fdescripcion" required value="${sonrisa.descripcion}">
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <br>
-                            <fieldset>
-                                <legend><i class="zmdi zmdi-assignment-o"></i> &nbsp; Otros datos</legend>
-                                <div class="container-fluid">
-                                    <div class="row">
+
                                         <div class="col-xs-12">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Nombre del gerente o director *</label>
-                                                <input pattern="[a-zA-Z0-9Ã¡Ã©Ã­Ã³ÃºÃÃÃÃÃÃ±Ã]{1,50}" class="form-control" type="text" name="director-reg" required="" maxlength="50">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">SÃ­mbolo de moneda *</label>
-                                                <input class="form-control" type="text" name="moneda-reg" required="" maxlength="1">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">AÃ±o *</label>
-                                                <input pattern="[0-9]{4,4}" class="form-control" type="text" name="year-reg" required="" maxlength="4">
+                                            <div class="form-group label-floating">       
+                                                <button class="btn btn-info btn-raised btn-sm">
+                                                    <input class="form-control" type="file" name="fimagen" id="img">
+                                                    Subir Imagen</button>
+                                                <label class="form-group label-floating" id="vista">
+                                                    <img src="<%=request.getContextPath()%>/ControllerWrite?table=sonrisa_del_mes&fid=${sonrisa.id}"
+                                                         height="250" width="250">              
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -140,6 +146,7 @@
         <script src="./js/ripples.min.js"></script>
         <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/previewfile.js"></script>
         <script>
             $.material.init();
         </script>
