@@ -16,12 +16,10 @@ public class genericDAOimplements extends Conection implements genericDAO {
     @Override
     public void insert(String inser, byte[] image) throws Exception {
         this.conectar();
-        String[] armar = verific_insert(inser);
-        if(armar[0].equals("Historial"))
+        String[] armar = verific_insert(inser,image);
+        if(image==null)
         {
-            armar = verific_insert2(inser);
-            String sql = "INSERT INTO " + armar[0] + " " + armar[1] + " VALUES " + armar[2] +")"; 
-            System.out.println(sql);
+           String sql = "INSERT INTO " + armar[0] + " " + armar[1] + " VALUES " + armar[2] + ")";
             PreparedStatement ps = this.conn.prepareStatement(sql);
             ps.executeUpdate();
         }else{
@@ -37,9 +35,8 @@ public class genericDAOimplements extends Conection implements genericDAO {
     public void update(String up, byte[] image) throws Exception {
         this.conectar();
         String[] consulta = verific_update(up);
-        if(consulta[0].equals("Historial"))
-        {
-            consulta = verific_update2(up);
+        if(image==null)
+        {    
             String sql = "UPDATE " + consulta[0] + " SET " + consulta[1] + consulta[2];
             System.out.println(sql);
             PreparedStatement ps = this.conn.prepareStatement(sql);
@@ -211,7 +208,7 @@ public class genericDAOimplements extends Conection implements genericDAO {
     }
 
 //mis metodos no abstractos
-    private String[] verific_insert(String val) {
+    private String[] verific_insert(String val,byte[] img) {
         val = val.replace("{", ";");
         val = val.replace("=", ";");
         val = val.replace(",", ";");
@@ -251,65 +248,21 @@ public class genericDAOimplements extends Conection implements genericDAO {
 
             }
         }
+        
+        if(img==null)
+        {
+          consulta[1] = consulta[1].substring(0, consulta[1].length() - 1);
+          consulta[1] =consulta[1]+")";
+        }else
+        {
         consulta[1] = consulta[1] + "imagen)";
-        //para eliminar el el ultimo caracter
-        consulta[2] = consulta[2].substring(0, consulta[2].length() - 1);
-        return consulta;
-    }
-    
-    //verificar insert para historial
-    
-        private String[] verific_insert2(String val) {
-        val = val.replace("{", ";");
-        val = val.replace("=", ";");
-        val = val.replace(",", ";");
-        val = val.replace("}", "");
-        val = val.replace("}", "");
-
-        String[] split = val.split(";");
-        val = "";
-        String[] consulta = new String[3];
-        consulta[0] = split[0];
-        consulta[1] = "(";//campo
-        consulta[2] = "(";//valor
-        int sw = 0;
-        int cont=0;//para saltar el campo valor del id
-        int alto=0;
-        for (int i = 1; i < split.length; i++) {
-            // par -> valor
-            // impar ->  campo
-            if (split[i].equals("id")) {
-                sw = 1;
-            }
-            
-            if(sw==1 )
-            {
-                cont++;
-            }
-            if(cont==3)
-            {
-                sw=0;
-            }
-            if (i % 2 == 0 && sw == 0) {
-                    consulta[2] = consulta[2] + "'" + split[i] + "',";
-            } else {
-                if (sw == 0) {
-                  if(alto<2)
-                  {
-                      consulta[1] = consulta[1] +split[i] + ",";
-                      alto++;
-                  }else{
-                      consulta[1] = consulta[1] +split[i] + ")";
-                  }
-                }
-
-
-            }
         }
+
         //para eliminar el el ultimo caracter
         consulta[2] = consulta[2].substring(0, consulta[2].length() - 1);
         return consulta;
     }
+    
 
     private String[] verific_update(String val) {
         val = val.replace("{", ";");
@@ -336,42 +289,10 @@ public class genericDAOimplements extends Conection implements genericDAO {
         //para eliminar el ultimo caracter de el String
         consulta[1] = consulta[1].substring(0, consulta[1].length() - 1);
         consulta[2] = "WHERE " + split[1] + "='" + split[2] + "'";
-
         return consulta;
 
     }
     
-    //verificacion para tablas que no tengan imagen
-    private String[] verific_update2(String val) {
-        val = val.replace("{", ";");
-        val = val.replace("=", ";");
-        val = val.replace(",", ";");
-        val = val.replace("}", "");
-        val = val.replace("}", "");
-
-        String[] split = val.split(";");
-        String[] consulta = new String[3];
-        consulta[0] = split[0];
-        consulta[1] = "";//campo
-
-        for (int i = 3; i < split.length; i++) {
-
-            // par -> valor
-            // impar ->  campo
-            if (i % 2 == 0) {
-                consulta[1] = consulta[1] + "'" + split[i] + "',";
-            } else {
-                consulta[1] = consulta[1] + split[i] + "=";
-            }
-        }
-        //para eliminar el ultimo caracter de el String
-        consulta[1] = consulta[1].substring(0, consulta[1].length() - 1);
-        consulta[2] = "WHERE " + split[1] + "='" + split[2] + "'";
-
-        return consulta;
-
-    }
-
     private String[] verific_select_generic(String table) {
         try {
           this.conectar();
