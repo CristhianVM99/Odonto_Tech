@@ -3,7 +3,7 @@
 <%@page import="com.odontotech.model.GenericClass"%>
 <%@page import="java.util.List"%>
 <%
-    List <GenericClass> Lista_Especialidad = (List<GenericClass>) request.getAttribute("Lista_especialidad");
+    List <GenericClass> lista_Especialidad = (List<GenericClass>) request.getAttribute("lista_especialidad");
 %>
 <!DOCTYPE html>
 <html lang="es">
@@ -43,7 +43,7 @@
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
-			  		<a href="Controller_especialidades" class="btn btn-info">
+			  		<a href="Controller_especialidades?option=view" class="btn btn-info">
 			  			<i class="zmdi zmdi-plus"></i> &nbsp; LISTA DE ESPECIALIDADES
 			  		</a>
 			  	</li>
@@ -74,7 +74,7 @@
 								</tr>
 							</thead>
 							<tbody>
-                                                        <c:forEach var="especialidad" items="${Lista_especialidad}">
+                                                        <c:forEach var="especialidad" items="${lista_especialidad}">
                                                             <tr>
                                                                 <td>${especialidad.id}</td>
                                                                 <td>${especialidad.nombre_especialidad}</td>

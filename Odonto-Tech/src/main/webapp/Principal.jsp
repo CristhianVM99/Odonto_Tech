@@ -1,4 +1,3 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,7 +30,7 @@
             <!-- Content page -->
             <div class="container-fluid">
                 <div class="page-header">
-                    <h1 class="text-titles">System <small>Tiles</small></h1>
+                    <h1 class="text-titles">Rol Usuario <small>${rol}</small></h1>
                 </div>
             </div>
             <div class="full-box text-center" style="padding: 30px 10px;">

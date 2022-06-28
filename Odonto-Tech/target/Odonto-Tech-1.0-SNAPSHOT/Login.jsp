@@ -1,7 +1,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.odontotech.model.GenericClass"%>
 <%
-    List<GenericClass>  Acceso = (List<GenericClass>)request.getAttribute("Acceso");
+    
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,17 +14,17 @@
 </head>
 <body>
 	<div class="full-box login-container cover">
-		<form action="Principal.jsp" method="" autocomplete="off" class="logInForm">
+		<form action="Controller_login" method="POST" autocomplete="off" class="logInForm">
 			<p class="text-center text-muted"><i class="zmdi zmdi-account-circle zmdi-hc-5x"></i></p>
 			<p class="text-center text-muted text-uppercase">Inicia sesion con tu cuenta</p>
 			<div class="form-group label-floating">
 			  <label class="control-label" for="UserName">Usuario</label>
-			  <input class="form-control" id="UserName" type="text">
+			  <input class="form-control" name="UserName" type="text">
 			  <p class="help-block">Escribe tu nombre de usuario</p>
 			</div>
 			<div class="form-group label-floating">
 			  <label class="control-label" for="UserPass">Contraseña</label>
-			  <input class="form-control" id="UserPass" type="text">
+			  <input class="form-control" name="UserPass" type="password">
 			  <p class="help-block">Escribe su contraseña</p>
 			</div>
 			<div class="form-group text-center">
