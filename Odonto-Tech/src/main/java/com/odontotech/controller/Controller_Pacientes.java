@@ -112,9 +112,10 @@ public class Controller_Pacientes extends HttpServlet {
                     request.getRequestDispatcher("Pasciente.jsp").forward(request, response);  
                     break;
                 case "mostrarFoto":
-                    int posicion = Integer.parseInt(request.getParameter("id"));
-                    byte[] imagen = dao.buscarById_image("pacientes", posicion);
-                    response.getOutputStream().write(imagen);                    
+                    String tabla =request.getParameter("tabla");
+                        int posicion = Integer.parseInt(request.getParameter("id"));
+                        byte[] imagen = dao.buscarById_image(tabla, posicion);
+                        response.getOutputStream().write(imagen);
                     break;
             }
         } catch (Exception e) {

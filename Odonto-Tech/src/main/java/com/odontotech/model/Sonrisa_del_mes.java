@@ -9,6 +9,7 @@ public class Sonrisa_del_mes {
     private String descripcion;
     private int id_doctor;
     private String ci_paciente;
+    private String estado;
 
     public Sonrisa_del_mes(int id, String nombre_paciente, String nombre_doctor, byte[] imagen, String descripcion, int id_doctor, String ci_paciente) {
         this.id = id;
@@ -28,6 +29,7 @@ public class Sonrisa_del_mes {
         this.descripcion = "";
         this.id_doctor = 0;
         this.ci_paciente = "";
+        this.estado="";
     }
 
     public int getId() {
@@ -85,10 +87,16 @@ public class Sonrisa_del_mes {
     public void setCi_paciente(String ci_paciente) {
         this.ci_paciente = ci_paciente;
     }
+  public String getEstado() {
+        return estado;
+    }
 
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
     @Override
     public String toString() {
-        return "Sonrisa_del_mes{" + "id=" + id + ", nombre_paciente=" + nombre_paciente + ", nombre_doctor=" + nombre_doctor + ", descripcion=" + descripcion + ", id_doctor=" + id_doctor + ", ci_paciente=" + ci_paciente + "}";
+        return "Sonrisa_del_mes{" + "id=" + id + ", nombre_paciente=" + nombre_paciente + ", nombre_doctor=" + nombre_doctor + ", descripcion=" + descripcion + ", id_doctor=" + id_doctor + ", ci_paciente=" + ci_paciente +", estado="+estado+"}";
     }
 
 }//class 

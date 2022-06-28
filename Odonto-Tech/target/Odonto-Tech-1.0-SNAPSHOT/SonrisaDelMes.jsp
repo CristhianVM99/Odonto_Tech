@@ -78,6 +78,7 @@
                                             <th class="text-center">DESCRIPCION</th>
                                             <th class="text-center">ID DOCTOR</th>
                                             <th class="text-center">CI PACIENTE</th>
+                                             <th class="text-center">ESTADO</th>
                                             <th class="text-center">ACTUALIZAR</th>
                                             <th class="text-center">ELIMINAR</th>
                                         </tr>
@@ -94,6 +95,7 @@
                                         <td><%=v[8]%></td>
                                         <td><%=v[10]%></td>
                                         <td><%=v[12]%></td>
+                                        <td><%=v[14]%></td>
                                         <td>
                                             <a href="Controller_Sonrisa_Del_Mes?action=edit&fid=<%=v[2]%>" class="btn btn-success btn-raised btn-xs">
                                                 <i class="zmdi zmdi-refresh"></i>
