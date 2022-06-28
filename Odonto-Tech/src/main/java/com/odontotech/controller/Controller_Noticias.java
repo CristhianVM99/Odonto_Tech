@@ -2,6 +2,7 @@ package com.odontotech.controller;
 
 import com.odontotech.dao.genericDAO;
 import com.odontotech.dao.genericDAOimplements;
+import com.odontotech.model.Doctores;
 import com.odontotech.model.GenericClass;
 import com.odontotech.model.Noticias;
 import com.odontotech.utiles.Recovery;
@@ -9,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -32,6 +34,8 @@ public class Controller_Noticias extends HttpServlet {
         genericDAO dao;
         String valores_dao[];
         List<GenericClass> lista;
+        Doctores d;
+        List<Doctores> doc= new ArrayList<Doctores>();
         try {
             if (accion.equals("vista")) {
                 dao = new genericDAOimplements();
@@ -40,12 +44,34 @@ public class Controller_Noticias extends HttpServlet {
                 request.getRequestDispatcher("Noticias.jsp").forward(request, response);
             }
             if (accion.equals("add")) {
+                 dao = new genericDAOimplements();
+                     lista = dao.select("doctores");
+                    for (GenericClass cls : lista) {
+                        valores_dao = cls.getToString();
+                        d = new Doctores();
+                        d.setId(Integer.parseInt(valores_dao[2]));
+                        d.setNombre(valores_dao[4]);
+                        doc.add(d);
+                    }
+                
                 n = new Noticias();
                 request.setAttribute("valor", "nuevo");
+                 request.setAttribute("lis_doc", doc);
                 request.setAttribute("noti", n);
                 request.getRequestDispatcher("FrmNoticias.jsp").forward(request, response);
             }
             if (accion.equals("edit")) {
+                 dao = new genericDAOimplements();
+                     lista = dao.select("doctores");
+                    for (GenericClass cls : lista) {
+                        valores_dao = cls.getToString();
+                        d = new Doctores();
+                        d.setId(Integer.parseInt(valores_dao[2]));
+                        d.setNombre(valores_dao[4]);
+                        doc.add(d);
+                    }
+                
+                
                 id = Integer.parseInt(request.getParameter("fid"));
                 dao = new genericDAOimplements();
                 valores_dao = dao.buscarById("noticias", id);
@@ -58,6 +84,7 @@ public class Controller_Noticias extends HttpServlet {
                 n.setEstado(valores_dao[12]);
                 
                 request.setAttribute("noti", n);
+                 request.setAttribute("lis_doc", doc);
                 request.setAttribute("valor", "modificar");
                 request.getRequestDispatcher("FrmNoticias.jsp").forward(request, response);
 

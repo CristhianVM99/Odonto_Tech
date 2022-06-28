@@ -78,7 +78,7 @@
                     <div class="panel-body">
                         <form action="Controller_Noticias" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="fid" value="<%=n.getId()%>">
-                            <input type="hidden" name="fid_doctor" value="1"%>
+          
                             <!-- se debe recuperar el id del doctor de la tabla usuarios  -->
                        <!--  <input type="hidden" name="fid_doctor" value=<%=n.getId_doctor()%>>-->
                             <fieldset>
@@ -108,6 +108,22 @@
                                                 </c:if>
                                             </div>
                                         </div>
+                                           <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Nombre doctor *</label>
+                                                <select name="fid_doctor" class="form-control" required>
+                                                    <option value=""  >--Seleccione--</option>
+                                                    <c:forEach var="valor_doctor" items="${lis_doc}">
+                                                        <option value="${valor_doctor.id}"
+                                                                <c:if test="${noti.id_doctor==valor_doctor.id}" var="sss">
+                                                                    selected  
+                                                                </c:if> 
+                                                                >
+                                                            ${valor_doctor.nombre}</option>
+                                                        </c:forEach>   
+                                                </select>
+                                            </div>
+                                        </div>   
                                         <div class="col-xs-12">
                                             <div class="form-group">
                                                 <label class="control-label">Estado *</label>
