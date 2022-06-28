@@ -30,13 +30,17 @@ public class Controller_Historial extends HttpServlet {
             genericDAO dao = new genericDAOimplements();
             List<GenericClass> lista_historial = null; 
             Historial historial = new Historial();
-            
+            String ci;
             switch (action) {
                 case "add":
+                    String id_registro = request.getParameter("id_registro"); 
+                    historial.setCi_paciente(id_registro);
+                    request.setAttribute("id_registro", id_registro);
                     request.setAttribute("historial", historial);
                     request.getRequestDispatcher("FrmHistorial.jsp").forward(request, response);
                     break;
                 case "edit":
+                    String id_registroedit = request.getParameter("id_registro"); 
                     int pos = Integer.parseInt(request.getParameter("id")); 
                     String[] paci = dao.buscarById("historial", pos);                    
                     
@@ -48,24 +52,25 @@ public class Controller_Historial extends HttpServlet {
                     he.setDescripcion(paci[8]);
                     
                     //==========fin de insercion=============
-                    
+                    request.setAttribute("id_registro", id_registroedit);
                     request.setAttribute("historial", he);
                     request.getRequestDispatcher("FrmHistorial.jsp").forward(request, response);
                     break;
                 case "delete":
+                    String id_registrodelete = request.getParameter("id_registro"); 
                     int reg = Integer.parseInt(request.getParameter("id"));
                     dao.delete("historial", reg);
-                    response.sendRedirect("Controller_Historial");
+                    response.sendRedirect("Controller_Historial?action=view&id="+id_registrodelete);
                     break;
                 case "view":
                     //obtener la lista de registros de los pascientes.==========
-                    String id =request.getParameter("id");
+                    ci =request.getParameter("id");
                     lista_historial = dao.select("historial");
                     List<Historial> lista = new ArrayList<>();
                     for(GenericClass cl : lista_historial) {
                         String[] val = cl.getToString();
                         Historial h = new Historial();
-                            if(val[4].equals(id)){
+                            if(val[4].equals(ci)){
                                 h.setId(Integer.parseInt(val[2]));
                                 h.setCi_paciente(val[4]);
                                 h.setFecha(convierteFecha(val[6]));
@@ -73,6 +78,7 @@ public class Controller_Historial extends HttpServlet {
                                 lista.add(h);
                             }
                     }
+                    request.setAttribute("id_registro", ci);
                     request.setAttribute("lista_historial", lista);
                     request.getRequestDispatcher("Historial.jsp").forward(request, response);  
                     break;
@@ -103,7 +109,7 @@ public class Controller_Historial extends HttpServlet {
             try {
                 
                 //nuevo registro
-                //dao.insert(P.toString(), imagen);
+                dao.insert(H.toString(), null);
                 
             } catch (Exception ex){
                 System.out.println("Error al insertar "+ex.getMessage());
@@ -111,13 +117,13 @@ public class Controller_Historial extends HttpServlet {
         }else{
             try {
                 //edicion de registro
-                //dao.update(P.toString(), imagen);
+                dao.update(H.toString(), null);
                 
             } catch (Exception ex) {
                 System.out.println("Error al editar "+ex.getMessage());
             } 
         }
-        response.sendRedirect("Controller_Historial");
+        response.sendRedirect("Controller_Historial?action=view&id="+ci_paciente);
     }
     
     public Date convierteFecha(String fecha)

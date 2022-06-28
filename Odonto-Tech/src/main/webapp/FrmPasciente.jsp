@@ -35,7 +35,7 @@
             
             <div class="container-fluid">
                 <div class="page-header">
-                    <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Pacientes <small>Consultorio</small></h1>
+                    <h1 class="text-titles"><i class="zmdi zmdi-account zmdi zmdi-hc-fw"></i> Pacientes <small>Consultorio</small></h1>
                 </div>
                 <p class="lead">En esta ocacion mostraremos lo que son los registros de los pascientes que hay en la clinica. <br>A continuacion tenemos los siguientes Registros.</p>
             </div>

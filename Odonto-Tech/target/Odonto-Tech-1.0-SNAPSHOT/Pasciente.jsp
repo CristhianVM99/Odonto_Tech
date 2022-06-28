@@ -6,13 +6,10 @@
 <%@page import="java.util.List"%>
 <%@page import="com.odontotech.model.GenericClass"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-    List<GenericClass> lista_pacientes = (List<GenericClass>)request.getAttribute("lista_pacientes");        
-%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Empresa</title>
+	<title>Odonto Tech | Pacientes</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
@@ -41,7 +38,7 @@
                 
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Pacientes <small>Consultorio</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi zmdi-hc-fw"></i> Pacientes <small>Consultorio</small></h1>
 			</div>
                     <p class="lead">En esta ocacion mostraremos lo que son los registros de los pascientes que hay en la clinica. <br>A continuacion tenemos los siguientes Registros.</p>
 		</div>
@@ -103,22 +100,22 @@
                                                                 <td>                                                                    
                                                                     <form>
                                                                         <a href="Controller_Pacientes?action=edit&id=${paciente.ci}" class="btn btn-success btn-raised btn-xs">
-                                                                            <i class="zmdi zmdi-refresh"></i>
+                                                                            <i class="zmdi zmdi-edit"></i>
                                                                         </a>
                                                                     </form>
                                                                 </td>
                                                                 <td>
                                                                     <form>                                                                        
-                                                                        <a href="Controller_Historial?action=view&id=${paciente.ci}" class="btn btn-danger btn-raised btn-xs">
+                                                                        <a href="Controller_Pacientes?action=delete&id=${paciente.ci}" class="btn btn-danger btn-raised btn-xs">
                                                                             <i class="zmdi zmdi-delete"></i>
                                                                         </a>
                                                                     </form>
                                                                 </td>
                                                                 <td>
                                                                     <form>
-                                                                        <button type="submit" class="btn btn-primary btn-raised btn-xs">
-                                                                            <i class="zmdi zmdi-library"></i>
-                                                                        </button>
+                                                                        <a href="Controller_Historial?action=view&id=${paciente.ci}" class="btn btn-primary btn-raised btn-xs">
+                                                                            <i class="zmdi zmdi-book"></i>
+                                                                        </a>
                                                                     </form>
                                                                 </td
                                                             </tr>
