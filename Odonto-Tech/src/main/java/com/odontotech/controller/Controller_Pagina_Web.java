@@ -61,6 +61,9 @@ public class Controller_Pagina_Web extends HttpServlet {
                 case "Reservar_Cita":
                     request.getRequestDispatcher("View_Reservar_Cita.jsp").forward(request, response);
                     break;                    
+                case "Login":
+                    request.getRequestDispatcher("Login.jsp").forward(request, response);
+                    break;
                 case "view":
                     request.getRequestDispatcher("index.jsp").forward(request, response);
                     break;

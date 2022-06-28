@@ -68,7 +68,6 @@
                                 <a href="Controller_Pagina_Web?view=Adhesion_Dental" class="main_link menu_link--inside">Adhesion Dental</a>
                             </li>
                         </ul>
-
                     </li>
                     <li class="main_nav_item"><a href="Controller_Pagina_Web?view=Tarifas">Tarifas</a></li>
                     <li class="main_nav_item"><a href="Controller_Pagina_Web?view=Promociones">Promociones</a></li>
@@ -80,12 +79,14 @@
         <img src="images/phone-call.svg">
         <a href="Controller_Pagina_Web?view=Reservar_Cita"> <span>Reservar Cita </span></a>
     </div>
+    <div class="header_side d-flex flex-row justify-content-center align-items-center">
+        <a href="Controller_Pagina_Web?view=Login"><i class="fas fa-user-md" style="color: #fff"></i></a>
+    </div>
 
     <!-- Hamburger -->
     <div class="hamburger_container">
         <i class="fas fa-bars trans_200"></i>
     </div>
-
 </header>
 
 <!-- Menu -->

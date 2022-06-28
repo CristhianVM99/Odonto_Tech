@@ -30,26 +30,6 @@
 	<!-- Elements -->
 
 	<div class="elements">
-
-		<!-- Buttons 
-		<div class="buttons">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="elements_title">Buttons</div>
-						<div class="buttons_container">
-							<div class="button button_color_1 text-center trans_200"><a href="#">Read More</a></div>
-							<div class="button button_color_2 text-center trans_200"><a href="#">Read More</a></div>
-							<div class="button button_line_1 text-center trans_200"><a href="#">Read More</a></div>
-							<div class="button button_line_2 text-center trans_200"><a href="#">Read More</a></div>
-						</div>
-					</div>
-				</div>
-			</div>	
-		</div>
-                -->
-		<!-- Progress Bars and Accordions -->
-
 		<div class="pbars_accordions">
 			<div class="container">
 				<div class="row">
@@ -57,7 +37,6 @@
 						<div class="elements_title">Precios de los servicios</div>
 					</div>
 				</div>
-
 				<div class="row pbars_accordions_container">
 					<!-- Progress Bars & Accordions -->
 
@@ -172,13 +151,6 @@
 		<!-- Milestones -->
 		
 		<div class="milestones">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="elements_title">Milestones</div>
-					</div>
-				</div>
-			</div>
 
 			<div class="milestones_container">
 				<div class="milestones_background" style="background-image:url(images/milestones_background.jpg)"></div>
