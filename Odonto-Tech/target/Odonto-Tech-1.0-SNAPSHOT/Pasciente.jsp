@@ -120,7 +120,7 @@
                                                                             <i class="zmdi zmdi-library"></i>
                                                                         </button>
                                                                     </form>
-                                                                </td
+                                                                </td>
                                                             </tr>
                                                         </c:forEach>
 							</tbody>

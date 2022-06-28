@@ -1,17 +1,20 @@
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Pacientes.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Promociones.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Historial.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Doctores.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pacientes.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\utiles\Conection.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Historial.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAO.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Reserva_De_Citas.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\Reserva_De_Citas.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Doctores.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_login.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Principal.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Servlet_prueba.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pagina_Web.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\model\GenericClass.java
-C:\Users\Cristian UPEA\Documents\TECNOLOGIAS EMERGENTES 2\Producto\APPV.3\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAOimplements.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pacientes.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_especialidades.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Pacientes.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Historial.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Servlet_prueba.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Reserva_De_Citas.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Doctores.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_login.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Historial.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAOimplements.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Reserva_De_Citas.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\dao\genericDAO.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\almacen.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\GenericClass.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Pagina_Web.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Principal.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\controller\Controller_Doctores.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\especialidades.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\model\Promociones.java
+D:\proy_odontoTech\Odonto_Tech\Odonto-Tech\src\main\java\com\odontotech\utiles\Conection.java

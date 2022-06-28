@@ -32,5 +32,5 @@ public class especialidades {
     public String toString() {
         return "especialidades{" + "id=" + id + ", nombre_especialidad=" + nombre_especialidad + '}';
     }
-    
+        
 }
