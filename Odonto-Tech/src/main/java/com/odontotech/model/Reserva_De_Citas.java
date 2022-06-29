@@ -1,9 +1,9 @@
-
 package com.odontotech.model;
 
 import java.sql.Date;
 
 public class Reserva_De_Citas {
+
     private int id;
     private String nombre_paciente;
     private String descripcion_consulta;
@@ -13,6 +13,9 @@ public class Reserva_De_Citas {
     private int id_especialidad;
     private String servicios;
 
+<<<<<<< HEAD
+    public Reserva_De_Citas(int id, String nombre_paciente, String descripcion_consulta, Date fecha, String hora, int celular, int id_especialidad, String nombre_especialidad, String servicios) {
+=======
     public Reserva_De_Citas() {
         this.id = 0;
         this.nombre_paciente = "";
@@ -25,6 +28,7 @@ public class Reserva_De_Citas {
     }
 
     public Reserva_De_Citas(int id, String nombre_paciente, String descripcion_consulta, Date fecha, String hora, int celular, int id_especialidad, String servicios) {
+>>>>>>> df0f3d474fd897a53c586720ee0a902310bb09a2
         this.id = id;
         this.nombre_paciente = nombre_paciente;
         this.descripcion_consulta = descripcion_consulta;
@@ -33,6 +37,18 @@ public class Reserva_De_Citas {
         this.celular = celular;
         this.id_especialidad = id_especialidad;
         this.servicios = servicios;
+    }
+
+    public Reserva_De_Citas() {
+        this.id = 0;
+        this.nombre_paciente = "";
+        this.descripcion_consulta = "";
+        this.fecha = null;
+        this.hora = "";
+        this.celular = 0;
+        this.id_especialidad = 0;
+        this.nombre_especialidad = "";
+        this.servicios = "";
     }
 
     public int getId() {
@@ -103,7 +119,5 @@ public class Reserva_De_Citas {
     public String toString() {
         return "Reserva_De_Citas{" + "id=" + id + ", nombre_paciente=" + nombre_paciente + ", descripcion_consulta=" + descripcion_consulta + ", fecha=" + fecha + ", hora=" + hora + ", celular=" + celular + ", id_especialidad=" + id_especialidad + ", servicios=" + servicios + '}';
     }
-    
-    
-    
+
 }

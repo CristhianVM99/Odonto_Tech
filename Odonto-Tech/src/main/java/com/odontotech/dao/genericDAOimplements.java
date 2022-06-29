@@ -20,11 +20,13 @@ public class genericDAOimplements extends Conection implements genericDAO {
         if(image==null)
         {
            String sql = "INSERT INTO " + armar[0] + " " + armar[1] + " VALUES " + armar[2] + ")";
+           
             PreparedStatement ps = this.conn.prepareStatement(sql);
             ps.executeUpdate();
             System.out.println(sql);
         }else{
             String sql = "INSERT INTO " + armar[0] + " " + armar[1] + " VALUES " + armar[2] + ",?)";
+            JOptionPane.showMessageDialog(null, sql);
             PreparedStatement ps = this.conn.prepareStatement(sql);
             ps.setBytes(1, image);
             System.out.println(sql);

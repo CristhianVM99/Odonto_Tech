@@ -9,6 +9,7 @@ com\odontotech\controller\Controller_Promociones.class
 com\odontotech\model\Usuarios.class
 com\odontotech\controller\Controller_Pacientes.class
 com\odontotech\dao\genericDAO.class
+com\odontotech\controller\Controller_Almacen.class
 com\odontotech\controller\Controller_Principal.class
 com\odontotech\model\Doctores.class
 com\odontotech\controller\Controller_Sonrisa_Del_Mes.class
