@@ -104,17 +104,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <nav class="text-center">
-                            <ul class="pagination pagination-sm">
-                                <li class="disabled"><a href="javascript:void(0)">Â«</a></li>
-                                <li class="active"><a href="javascript:void(0)">1</a></li>
-                                <li><a href="javascript:void(0)">2</a></li>
-                                <li><a href="javascript:void(0)">3</a></li>
-                                <li><a href="javascript:void(0)">4</a></li>
-                                <li><a href="javascript:void(0)">5</a></li>
-                                <li><a href="javascript:void(0)">Â»</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

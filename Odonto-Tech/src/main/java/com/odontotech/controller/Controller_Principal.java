@@ -69,7 +69,6 @@ public class Controller_Principal extends HttpServlet {
                     cit.setHora(val[10]);
                     cit.setCelular(Integer.parseInt(val[12]));
                     cit.setId_especialidad(Integer.parseInt(val[14]));
-                    cit.setNombre_especialidad(val[16]);
                     cit.setServicios(val[18]);
                     lista_citas.add(cit);
                     cont_res++;
