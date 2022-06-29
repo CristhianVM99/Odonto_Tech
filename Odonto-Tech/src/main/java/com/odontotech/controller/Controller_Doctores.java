@@ -77,11 +77,12 @@ public class Controller_Doctores extends HttpServlet {
                     docedit.setId(Integer.parseInt(doct[2]));
                     docedit.setNombre(doct[4]);
                     docedit.setCi(doct[6]);
-                    docedit.setCelular(Integer.parseInt(doct[8]));
-                    docedit.setDireccion(doct[10]);
+                    docedit.setEspecialidad("ninguna");
+                    docedit.setCelular(Integer.parseInt(doct[10]));
+                    docedit.setDireccion(doct[12]);
                     foto = dao.buscarById_image("doctores", Integer.parseInt(doct[2]));
                     docedit.setImagen(foto);
-                    docedit.setId_especialidad(Integer.parseInt(doct[12]));
+                    docedit.setId_especialidad(Integer.parseInt(doct[14]));
                     
                     
                     request.setAttribute("lista_especialidades", lista_edit);
@@ -105,7 +106,7 @@ public class Controller_Doctores extends HttpServlet {
                             d.setId(Integer.parseInt(val[2]));
                             d.setNombre(val[4]);
                             d.setCi(val[6]);                            
-                            d.setEspecialidad(val[8]);
+                            d.setEspecialidad("ninguna");
                             d.setCelular(Integer.parseInt(val[10]));
                             d.setDireccion(val[12]);
                             foto = dao.buscarById_image("doctores", Integer.parseInt(val[2]));

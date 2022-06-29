@@ -30,7 +30,7 @@
             <!-- Content page -->
             <div class="container-fluid">
                 <div class="page-header">
-                    <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> ADMINISTRACION <small>ODONTO TECH</small></h1>
+                    <h1 class="text-titles"><i class="zmdi zmdi-truck zmdi-hc-fw"></i>ALMACENE <small>Consultorio</small>
                 </div>
                 <p class="lead">Registro de Productos</p>
             </div>

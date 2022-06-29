@@ -31,9 +31,9 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administración <small>ODONTO TECH</small></h1>
+                            <h1 class="text-titles"><i class="zmdi zmdi-case zmdi-hc-fw"></i> Especialidades <small>Consultorio</small></h1>
 			</div>
-			<p class="lead">En esta intefaz se puede observar las especialidades</p>
+			<p class="lead">En esta intefaz se puede observar las especialidades que tiene la empresa.</p>
 		</div>
 
 		<div class="container-fluid">
@@ -55,7 +55,7 @@
 		<div class="container-fluid">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE EMPRESAS</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ESPECIALIDADES</h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">

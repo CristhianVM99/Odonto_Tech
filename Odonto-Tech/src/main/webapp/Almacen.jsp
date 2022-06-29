@@ -31,9 +31,9 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> ADMINISTRACION <small>ODONTO TECH</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-truck zmdi-hc-fw"></i>ALMACENE <small>Consultorio</small></h1>
 			</div>
-			<p class="lead">Lista almacen Odonto tech</p>
+			<p class="lead">Lista de los almacenes que tiene la empresa asi aseguramos una mejor administracion.</p>
 		</div>
 
 		<div class="container-fluid">

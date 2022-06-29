@@ -17,7 +17,7 @@ public class Doctores {
         this.id = 0;
         this.nombre = "";
         this.ci = "";
-        this.especialidad="ninguna";
+        this.especialidad="";
         this.celular = 0;
         this.direccion = "";
         this.imagen = null;

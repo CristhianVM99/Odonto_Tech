@@ -30,7 +30,7 @@
                 <!-- Content page -->
                 <div class="container-fluid">
                     <div class="page-header">
-                        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> ADMINISTRACIÓN <small>Especialidades</small></h1>
+                        <h1 class="text-titles"><i class="zmdi zmdi-case zmdi-hc-fw"></i> Especialidades <small>Consultorio</small></h1>
                     </div>
                     <p class="lead">Ingrese los datos en los campos</p>
                 </div>

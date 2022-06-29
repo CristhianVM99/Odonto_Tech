@@ -31,9 +31,9 @@
             <!-- Content page -->
             <div class="container-fluid">
                 <div class="page-header">
-                    <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> AdministraciÃ³n <small>EMPRESA</small></h1>
+                    <h1 class="text-titles"><i class="zmdi zmdi-account-circle zmdi zmdi-hc-fw"></i>  Doctores <small>Consultorio</small></h1>
                 </div>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+                <p class="lead">En esta seccion administramos lo que son todos los doctores que pertenecen al consultorio ODONTO TECH<br>a continuacion tenemos los siguientes registros.</p>
             </div>
 
             <div class="container-fluid">

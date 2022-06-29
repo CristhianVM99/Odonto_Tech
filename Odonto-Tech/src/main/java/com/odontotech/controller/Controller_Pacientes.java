@@ -67,8 +67,8 @@ public class Controller_Pacientes extends HttpServlet {
                     
                     //==========insertamos los datos al objeto==
                     Pacientes pe = new Pacientes();
-                    pe.setNombre(paci[2]);
-                    pe.setCi(paci[4]);
+                    pe.setNombre(paci[4]);
+                    pe.setCi(paci[2]);
                     pe.setFecha_inicio(convierteFecha(paci[6]));
                     pe.setDescripcion(paci[8]);
                     pe.setCelular(Integer.parseInt(paci[10]));
@@ -97,14 +97,14 @@ public class Controller_Pacientes extends HttpServlet {
                     for(GenericClass cl : lista_pacientes) {
                         String[] val = cl.getToString();
                         Pacientes p = new Pacientes();
-                            p.setNombre(val[2]);
-                            p.setCi(val[4]);
+                            p.setNombre(val[4]);
+                            p.setCi(val[2]);
                             p.setFecha_inicio(convierteFecha(val[6]));
                             p.setDescripcion(val[8]);
                             p.setCelular(Integer.parseInt(val[10]));
                             p.setServicio(val[12]);
                             p.setDireccion(val[14]);
-                            foto = dao.buscarById_image("pacientes", Integer.parseInt(val[4]));
+                            foto = dao.buscarById_image("pacientes", Integer.parseInt(val[2]));
                             p.setImagen(foto);
                             lista.add(p);
                     }

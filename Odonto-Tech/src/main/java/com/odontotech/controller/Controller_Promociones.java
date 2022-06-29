@@ -51,7 +51,7 @@ public class Controller_Promociones extends HttpServlet {
                         lista.add(p);
                     }
                     request.setAttribute("list", lista);
-                    request.getRequestDispatcher("Pomociones.jsp").forward(request, response);
+                    request.getRequestDispatcher("Promociones.jsp").forward(request, response);
                     break;
                 case "add":
                     /*falta mandar datos de las especialidades*/
