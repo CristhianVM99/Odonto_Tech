@@ -18,7 +18,7 @@
                     <img src="images/logo-4.png" alt="">
                     <span>Odonto Tech.</span>
                 </a>
-                
+
             </div>
         </div>
 
@@ -101,24 +101,49 @@
     <div class="menu_inner menu_mm">
         <div class="menu menu_mm">
             <ul class="menu_list menu_mm">
-                <li class="menu_item menu_mm"><a href="#">Odontologia</a></li>
-                <li class="menu_item menu_mm"><a href="#">Odontologia Cosmetica</a></li>
-                <li class="menu_item menu_mm"><a href="#">Tarifa</a></li>
-                <li class="menu_item menu_mm"><a href="#">Promociones</a></li>
-                <li class="menu_item menu_mm"><a href="#">Reservar Cita</a></li>
+                <h1>Servicios</h1>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Dentista_De_Niños" class="main_link menu_link--inside">Dentista de Niños</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Higiene_Dental" class="main_link menu_link--inside">Higiene Dental</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Empastes_Dentales" class="main_link menu_link--inside">Empaste Dental</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Puentes_Dentales" class="main_link menu_link--inside">Puentes Dentales</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Coronas_Dentales" class="main_link menu_link--inside">Coronas Dentales</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Extraccion_Dental" class="main_link menu_link--inside">Extraccion Dental</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Dentadura_Postiza" class="main_link menu_link--inside">Dentadura Postisa</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Blanqueamiento_Dental" class="main_link menu_link--inside">Blanqueamieto Dental</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Brakets" class="main_link menu_link--inside">Brakets</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Carillas_Dentales" class="main_link menu_link--inside">Carrillas Dentales</a>
+                </li>
+                <li class="menu_item menu_mm">
+                    <a href="Controller_Pagina_Web?view=Adhesion_Dental" class="main_link menu_link--inside">Adhesion Dental</a>
+                </li>
+                <li class="menu_item menu_mm"><a href="Controller_Pagina_Web?view=Tarifas">Tarifas</a></li>
+                <li class="menu_item menu_mm"><a href="Controller_Pagina_Web?view=Promociones">Promociones</a></li>
+                <li class="menu_item menu_mm"><a href="Controller_Pagina_Web?view=Reservar_Cita"> <span>Reservar Cita</span></a></li>
             </ul>
 
             <!-- Menu Social -->
-
-            <div class="menu_social_container menu_mm">
-                <ul class="menu_social menu_mm">
-                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
+            <a href="Controller_Pagina_Web?view=Login" class="menu_social_item_login" ><i class="fas fa-user-md" style="color: #fff"></i></a>
+            
+      
 
             <div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
         </div>

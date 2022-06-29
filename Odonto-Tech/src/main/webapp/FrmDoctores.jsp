@@ -58,7 +58,7 @@
                                 <legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos basicos</legend>
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <input type="text" name="id" value="${doctor.id}">
+                                        <input type="hidden" name="id" value="${doctor.id}">
                                         <div class="col-xs-12">
                                             <div class="form-group label-floating">
                                                 <label class="control-label">NOMBRE</label>

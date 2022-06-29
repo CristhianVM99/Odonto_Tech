@@ -10,17 +10,11 @@ import javax.swing.JOptionPane;
 
 
 public class Conection {
-<<<<<<< HEAD
+
     static String driver="org.postgresql.Driver";
     static String url = "jdbc:postgresql://localhost:5432/ODONTO_TECH";//  ODONTO_TECH
     static String usuario = "postgres"; //postgres
     static String password = "POSTGRES"; //admin
-=======
-   static String driver="org.postgresql.Driver";
-     static String url="jdbc:postgresql://localhost:5432/odonto_tech";//odonto_tech
-     static String usuario="postgres"; //postgres
-     static String password="admin"; //admin
->>>>>>> 5219d866538cabad4b1dc0a7be6067a64bdd4d51
 
     protected Connection conn;
     

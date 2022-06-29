@@ -216,12 +216,12 @@
 								<h3>Tags</h3>
 							</div>
 							<div class="tags d-flex flex-row flex-wrap">
-								<div class="tag"><a href="#">Higiene Dental</a></div>
-								<div class="tag"><a href="#">Empaste Dental</a></div>
-								<div class="tag"><a href="#">Puentes Dentales</a></div>
-								<div class="tag"><a href="#">Coronas Dentales</a></div>
-								<div class="tag"><a href="#">Extraccion Dental</a></div>
-								<div class="tag"><a href="#">Dentadura Postisa</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Higiene_Dental">Higiene Dental</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Empastes_Dentales">Empaste Dental</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Puentes_Dentales">Puentes Dentales</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Coronas_Dentales">Coronas Dentales</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Extraccion_Dental">Extraccion Dental</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Dentadura_Postiza">Dentadura Postisa</a></div>
 							</div>
 						</div>
 

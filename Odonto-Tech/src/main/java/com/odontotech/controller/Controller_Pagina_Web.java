@@ -2,7 +2,6 @@ package com.odontotech.controller;
 
 import com.odontotech.dao.genericDAO;
 import com.odontotech.dao.genericDAOimplements;
-<<<<<<< HEAD
 import com.odontotech.model.Doctores;
 import com.odontotech.model.GenericClass;
 import com.odontotech.model.Reserva_De_Citas;
@@ -13,11 +12,9 @@ import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-=======
 import com.odontotech.model.GenericClass;
 import java.io.IOException;
 import java.io.PrintWriter;
->>>>>>> 5219d866538cabad4b1dc0a7be6067a64bdd4d51
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -88,8 +85,8 @@ public class Controller_Pagina_Web extends HttpServlet {
                     break;
                 case "Reservar_Cita":
                     //obetenemos la lista de especialidades que tiene el consultorio.
-                    genericDAO dao = new genericDAOimplements();
-                    List<GenericClass> lista_especialidades = dao.select("especialidades");
+                    genericDAO dao3 = new genericDAOimplements();
+                    List<GenericClass> lista_especialidades = dao3.select("especialidades");
                     
                     List<especialidades> lista_view= new ArrayList<>();
                     for(GenericClass cl : lista_especialidades) {
@@ -130,7 +127,6 @@ public class Controller_Pagina_Web extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<<<<<<< HEAD
         
         Reserva_De_Citas R = new Reserva_De_Citas();
         genericDAO dao = new genericDAOimplements();
@@ -178,8 +174,5 @@ public class Controller_Pagina_Web extends HttpServlet {
             System.out.println("Error al convertir la fecha "+ex.getMessage());
         }        
         return fechaBD;
-=======
-
->>>>>>> 5219d866538cabad4b1dc0a7be6067a64bdd4d51
     }
 }

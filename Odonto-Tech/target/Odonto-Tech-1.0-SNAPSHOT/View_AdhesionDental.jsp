@@ -41,7 +41,7 @@
 						<!-- News Post -->
 						<div class="news_post">
 							<div class="news_post_image">
-                                                            <img src="images/img-01.jpg" alt="https://unsplash.com/@dsmacinnes">
+                                                            <img src="images/Adhesion.jpg" alt="https://unsplash.com/@dsmacinnes">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">
@@ -52,7 +52,7 @@
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html">¿Dentista De Niños?</a>
+										<a href="news_post.html">¿Que es una Adhesion Dental?</a>
 									</div>
 									<div class="news_post_meta">
 										<span class="news_post_author"><a href="#">American Academy of Pediatrics</a></span>
@@ -74,7 +74,7 @@
 						<!-- News Post -->
 						<div class="news_post">
 							<div class="news_post_image">
-                                                            <img src="images/img-02.jpg" alt="https://unsplash.com/@dsmacinnes">
+                                                            <img src="images/Adhesion2.jpg" alt="https://unsplash.com/@dsmacinnes">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">
@@ -85,7 +85,7 @@
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html">Cuidado dental en niños</a>
+										<a href="news_post.html">¿Como es el proceso?</a>
 									</div>
 									<div class="news_post_meta">
 										<span class="news_post_author"><a href="#">MedlinePlus</a></span>
@@ -116,7 +116,7 @@
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html">La importancia del Cuidado Dental Pediatrico.</a>
+										<a href="news_post.html">La importancia del Cuidado Dental antes de la Adhesion.</a>
 									</div>
 									<div class="news_post_meta">
 										<span class="news_post_author"><a href="#">Colgate</a></span>
@@ -216,12 +216,12 @@
 								<h3>Tags</h3>
 							</div>
 							<div class="tags d-flex flex-row flex-wrap">
-								<div class="tag"><a href="#">Higiene Dental</a></div>
-								<div class="tag"><a href="#">Empaste Dental</a></div>
-								<div class="tag"><a href="#">Puentes Dentales</a></div>
-								<div class="tag"><a href="#">Coronas Dentales</a></div>
-								<div class="tag"><a href="#">Extraccion Dental</a></div>
-								<div class="tag"><a href="#">Dentadura Postisa</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Higiene_Dental">Higiene Dental</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Empastes_Dentales">Empaste Dental</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Puentes_Dentales">Puentes Dentales</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Coronas_Dentales">Coronas Dentales</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Extraccion_Dental">Extraccion Dental</a></div>
+								<div class="tag"><a href="Controller_Pagina_Web?view=Dentadura_Postiza">Dentadura Postisa</a></div>
 							</div>
 						</div>
 

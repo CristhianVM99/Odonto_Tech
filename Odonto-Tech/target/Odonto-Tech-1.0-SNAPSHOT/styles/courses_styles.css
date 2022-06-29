@@ -528,6 +528,7 @@ section
 	transition: all 0.6s ease;
 	visibility: hidden;
 	opacity: 0;
+        overflow: hidden;
 }
 .menu_container.active
 {
@@ -538,7 +539,7 @@ section
 .menu
 {
 	position: absolute;
-	top:150px;
+	top:80px;
 	left: 0;
 	padding-left: 15%;
 }
@@ -572,7 +573,7 @@ section
 .menu_item a
 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 36px;
+	font-size: 17px;
 	font-weight: 700;
 	color: #3a3a3a;
 	-webkit-transition: all 200ms ease;
@@ -632,7 +633,23 @@ section
 {
 	background: var(--color_principal);
 }
-
+.menu_social_item_login 
+{
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    background: var(--color_principal);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 60px;
+}
 /*********************************
 4.1 Menu Social
 *********************************/
@@ -740,7 +757,7 @@ section
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
-	background: #ffb606;
+	background: var(--color_principal);
 	padding-top: 24px;
 	padding-bottom: 18px;
 	padding-left: 39px;
@@ -794,7 +811,7 @@ section
 	width: 55px;
 	height: 4px;
 	content: '';
-	background: #ffb606;
+	background: var(--color_principal);
 }
 
 /*********************************
@@ -913,7 +930,7 @@ section
 {
 	width: 67px;
 	height: 67px;
-	background: #ffb606;
+	background: var(--color_principal);
 	margin-left: auto;
 }
 .course_price span
